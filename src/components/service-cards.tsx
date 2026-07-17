@@ -1,0 +1,45 @@
+import {
+  Building2,
+  CircleDot,
+  Hammer,
+  PackageOpen,
+  Recycle,
+  ShieldAlert,
+  type LucideIcon,
+} from "lucide-react";
+import { services } from "@/lib/site-config";
+
+const icons: Record<(typeof services)[number]["icon"], LucideIcon> = {
+  Hammer,
+  Building2,
+  PackageOpen,
+  ShieldAlert,
+  CircleDot,
+  Recycle,
+};
+
+export function ServiceCards() {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {services.map((service) => {
+        const Icon = icons[service.icon];
+        return (
+          <article
+            key={service.slug}
+            className="rounded-xl border border-white/12 bg-[#1a4558] p-6 shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-0.5 hover:border-[#ffcf00]/40 hover:bg-[#1f5268] hover:shadow-[0_12px_28px_rgba(0,0,0,0.3)]"
+          >
+            <span className="flex size-11 items-center justify-center rounded-lg bg-[#ffcf00] text-[#0f3040]">
+              <Icon className="size-5" aria-hidden />
+            </span>
+            <h2 className="mt-5 text-xl font-bold tracking-tight text-white">
+              {service.title}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-white/70">
+              {service.description}
+            </p>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
