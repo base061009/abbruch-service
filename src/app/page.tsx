@@ -50,7 +50,7 @@ export default function HomePage() {
             size="lg"
             className="h-11 rounded-lg border-2 border-[#ffcf00]/70 bg-transparent px-8 text-base font-semibold text-[#ffcf00] hover:bg-[#ffcf00]/10 hover:text-[#ffcf00]"
           >
-            <Link href="/about">Mehr erfahren</Link>
+            <Link href="/services">Mehr erfahren</Link>
           </Button>
         </div>
       </div>
