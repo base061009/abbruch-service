@@ -49,10 +49,20 @@ export const metadata: Metadata = {
     description: siteConfig.shareText,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: new URL(siteConfig.ogImage, siteConfig.url).toString(),
+        secureUrl: new URL(siteConfig.ogImage, siteConfig.url).toString(),
+        type: "image/jpeg",
         width: 1200,
         height: 630,
         alt: `${siteConfig.shortName} – Abbruch & Entkernung`,
+      },
+      {
+        url: new URL(siteConfig.ogImageSquare, siteConfig.url).toString(),
+        secureUrl: new URL(siteConfig.ogImageSquare, siteConfig.url).toString(),
+        type: "image/jpeg",
+        width: 400,
+        height: 400,
+        alt: siteConfig.shortName,
       },
     ],
   },
@@ -60,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.shortName,
     description: siteConfig.shareText,
-    images: [siteConfig.ogImage],
+    images: [new URL(siteConfig.ogImage, siteConfig.url).toString()],
   },
   robots: {
     index: true,

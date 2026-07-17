@@ -10,7 +10,8 @@ export const siteConfig = {
     "Professioneller Abbruch, Entkernung und Entrümpelung in Österreich – von der Planung bis zur Entsorgung.",
   shareText:
     "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Das Abbruchservice.",
-  ogImage: "/preview.jpeg",
+  ogImage: "/preview.jpg",
+  ogImageSquare: "/preview-square.jpg",
   url: "https://abbruch-service.vercel.app",
   locale: "de_AT",
   phone: "+43 1 234 56 78",

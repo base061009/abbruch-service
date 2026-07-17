@@ -9,16 +9,6 @@ export const metadata: Metadata = {
     absolute: siteConfig.shortName,
   },
   description: siteConfig.description,
-  openGraph: {
-    title: siteConfig.shortName,
-    description: siteConfig.shareText,
-    images: [siteConfig.ogImage],
-  },
-  twitter: {
-    title: siteConfig.shortName,
-    description: siteConfig.shareText,
-    images: [siteConfig.ogImage],
-  },
   alternates: { canonical: "/" },
 };
 
