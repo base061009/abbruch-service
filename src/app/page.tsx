@@ -5,8 +5,20 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Start",
+  title: {
+    absolute: siteConfig.shortName,
+  },
   description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.shortName,
+    description: siteConfig.shareText,
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    title: siteConfig.shortName,
+    description: siteConfig.shareText,
+    images: [siteConfig.ogImage],
+  },
   alternates: { canonical: "/" },
 };
 

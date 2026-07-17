@@ -8,6 +8,9 @@ export const siteConfig = {
   tagline: "Sauber. Sicher. Termingerecht.",
   description:
     "Professioneller Abbruch, Entkernung und Entrümpelung in Österreich – von der Planung bis zur Entsorgung.",
+  shareText:
+    "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Das Abbruchservice.",
+  ogImage: "/preview.jpeg",
   url: "https://das-abbruchservice.at",
   locale: "de_AT",
   phone: "+43 1 234 56 78",

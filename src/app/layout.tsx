@@ -19,11 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Abbruch & Entkernung Österreich`,
-    template: `%s | ${siteConfig.name}`,
+    default: siteConfig.shortName,
+    template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
-  applicationName: siteConfig.name,
+  applicationName: siteConfig.shortName,
   keywords: [
     "Abbruch",
     "Entkernung",
@@ -36,18 +36,31 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
+  icons: {
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    apple: [{ url: "/logo.png", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
+    siteName: siteConfig.shortName,
+    title: siteConfig.shortName,
+    description: siteConfig.shareText,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1600,
+        height: 1200,
+        alt: `${siteConfig.shortName} – Abbruch & Entkernung`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: siteConfig.shortName,
+    description: siteConfig.shareText,
+    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
