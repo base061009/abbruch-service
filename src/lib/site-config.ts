@@ -11,7 +11,7 @@ export const siteConfig = {
   shareText:
     "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Das Abbruchservice.",
   ogImage: "/preview.jpeg",
-  url: "https://das-abbruchservice.at",
+  url: "https://abbruch-service.vercel.app",
   locale: "de_AT",
   phone: "+43 1 234 56 78",
   phoneHref: "tel:+4312345678",
