@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Dienstleistungen",
-  description: `Abbruch, Entkernung, Entrümpelung und mehr – Leistungen von ${siteConfig.name}.`,
+  description: `Komplettentkernung, Bad- und Küchenentkernung sowie Abbruch – Leistungen von ${siteConfig.name}.`,
   alternates: { canonical: "/services" },
 };
 

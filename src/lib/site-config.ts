@@ -53,85 +53,65 @@ export const footerLinks = [
 
 export const services = [
   {
-    slug: "abbruch",
-    title: "Abbruch & Rückbau",
+    slug: "komplettentkernung",
+    title: "Komplettentkernung",
     description:
-      "Teil- und Totalabbruch von Gebäuden – geplant, genehmigt und fachgerecht ausgeführt.",
-    icon: "Hammer",
-  },
-  {
-    slug: "entkernung",
-    title: "Entkernung",
-    description:
-      "Innenausbau entfernen, Tragwerk freilegen – ideal vor Sanierung oder Umbau.",
+      "Vollständige Entkernung von Wohnungen und Gebäuden – Innenausbau, Installationen und nicht tragende Bauteile fachgerecht entfernt.",
     icon: "Building2",
   },
   {
-    slug: "entrumpelung",
-    title: "Entrümpelung",
+    slug: "badentkernung",
+    title: "Badentkernung",
     description:
-      "Wohnungen, Keller, Dachböden und Gewerbeobjekte – schnell und sorgfältig geräumt.",
-    icon: "PackageOpen",
+      "Sanitäranlagen, Fliesen und Installationen im Bad entfernen – sauber, staubarm und bereit für die Neuausstattung.",
+    icon: "Bath",
   },
   {
-    slug: "schadstoff",
-    title: "Schadstoffsanierung",
+    slug: "kuechenentkernung",
+    title: "Küchenentkernung",
     description:
-      "Asbest, PCB und andere Schadstoffe sicher erkennen, entfernen und entsorgen.",
-    icon: "ShieldAlert",
+      "Küchenzeilen, Geräte und Leitungen demontieren und entsorgen – präzise und termingerecht vor Ihrem Umbau.",
+    icon: "CookingPot",
   },
   {
-    slug: "betonschneiden",
-    title: "Betonschneiden & Kernbohrung",
+    slug: "abbruch",
+    title: "Abbruch",
     description:
-      "Präzise Öffnungen und Schnitte in Beton – vibrationsarm und staubkontrolliert.",
-    icon: "CircleDot",
-  },
-  {
-    slug: "entsorgung",
-    title: "Bauschutt & Entsorgung",
-    description:
-      "Sortierte Entsorgung und Recycling – gesetzeskonform und umweltbewusst.",
-    icon: "Recycle",
+      "Teil- und Totalabbruch von Gebäuden – geplant, genehmigt und fachgerecht ausgeführt.",
+    icon: "Hammer",
   },
 ] as const;
 
 export const projects = [
   {
     id: "1",
-    title: "Wohnhaus Wien-Favoriten",
+    title: "Terrasse Wien",
     location: "Wien",
     year: "2025",
-    description: "Vollständiger Abbruch eines Mehrfamilienhauses inkl. Entsorgung.",
+    description:
+      "Komplette Freiräumung und Rückbau einer Balkonterrassenfläche inkl. Entsorgung.",
     before: "/pics/vorher-1.jpeg",
     after: "/pics/nachher-1.jpeg",
   },
   {
     id: "2",
-    title: "Gewerbehalle Linz",
-    location: "Linz",
+    title: "Wohnungsentkernung",
+    location: "Wien",
     year: "2025",
-    description: "Entkernung und Teilrückbau vor Umnutzung zur Logistikfläche.",
-    before: "/pics/vorher-1.jpeg",
-    after: "/pics/nachher-1.jpeg",
+    description:
+      "Komplettentkernung eines Wohnraums – Bodenbeläge und Innenausbau fachgerecht entfernt.",
+    before: "/pics/vorher-2.jpeg",
+    after: "/pics/nachher-2.jpeg",
   },
   {
     id: "3",
-    title: "Dachgeschoss Graz",
-    location: "Graz",
+    title: "Altbau-Entkernung",
+    location: "Wien",
     year: "2024",
-    description: "Entrümpelung und Entkernung eines Dachgeschosses für Ausbau.",
-    before: "/pics/vorher-1.jpeg",
-    after: "/pics/nachher-1.jpeg",
-  },
-  {
-    id: "4",
-    title: "Industrieanlage St. Pölten",
-    location: "St. Pölten",
-    year: "2024",
-    description: "Maschineller Abbruch mit Schadstoffsanierung und Recycling.",
-    before: "/pics/vorher-1.jpeg",
-    after: "/pics/nachher-1.jpeg",
+    description:
+      "Entkernung einer Altbauwohnung – Böden, Installationen und nicht tragende Bauteile entfernt.",
+    before: "/pics/vorher-3.jpeg",
+    after: "/pics/nachher-3.jpeg",
   },
 ] as const;
 

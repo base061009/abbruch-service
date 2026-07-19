@@ -1,26 +1,22 @@
 import {
+  Bath,
   Building2,
-  CircleDot,
+  CookingPot,
   Hammer,
-  PackageOpen,
-  Recycle,
-  ShieldAlert,
   type LucideIcon,
 } from "lucide-react";
 import { services } from "@/lib/site-config";
 
 const icons: Record<(typeof services)[number]["icon"], LucideIcon> = {
-  Hammer,
   Building2,
-  PackageOpen,
-  ShieldAlert,
-  CircleDot,
-  Recycle,
+  Bath,
+  CookingPot,
+  Hammer,
 };
 
 export function ServiceCards() {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2">
       {services.map((service) => {
         const Icon = icons[service.icon];
         return (
