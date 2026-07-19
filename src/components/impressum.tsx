@@ -58,7 +58,7 @@ export function Impressum({ className }: ImpressumProps) {
 
         <section>
           <h2 className="font-heading text-lg font-semibold">Vertretung</h2>
-          <p className="mt-2">Geschäftsführer: {legal.managingDirector}</p>
+          <p className="mt-2">Inhaber: {legal.managingDirector}</p>
         </section>
 
         <section>

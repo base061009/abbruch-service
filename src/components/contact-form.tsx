@@ -81,7 +81,7 @@ export function ContactForm() {
           name="name"
           required
           autoComplete="name"
-          placeholder="Max Mustermann"
+          placeholder="Vor- und Nachname"
           className="h-11 border-white/15 bg-white/5 text-white placeholder:text-white/35"
         />
       </div>

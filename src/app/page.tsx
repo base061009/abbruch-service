@@ -26,7 +26,7 @@ export default function HomePage() {
 
       <div className="order-1 lg:order-2 lg:pl-2">
         <p className="text-xs font-semibold tracking-[0.2em] text-[#ffcf00] uppercase">
-          Abbruch · Entkernung
+          Abbruch · Entkernung · Entrümpelung
         </p>
         <h1 className="mt-4 text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl xl:text-6xl">
           Von der Besichtigung bis zur sauberen Übergabe
