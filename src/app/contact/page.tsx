@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <div className="w-full px-5 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
       <header className="max-w-3xl">
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#ffcf00] uppercase">
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
           Kontakt
         </p>
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
@@ -47,7 +47,7 @@ export default function ContactPage() {
               <span className="font-semibold text-white">E-Mail:</span>{" "}
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-[#ffcf00] hover:underline"
+                className="text-[#f2aa4c] hover:underline"
               >
                 {siteConfig.email}
               </a>

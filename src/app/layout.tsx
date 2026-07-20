@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0F3040",
+  themeColor: "#101820",
   width: "device-width",
   initialScale: 1,
 };
@@ -111,13 +111,13 @@ export default function RootLayout({
       lang="de-AT"
       className={`${sourceSerif.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-[#0f3040] font-sans text-white">
+      <body className="flex min-h-full flex-col bg-[#101820] font-sans text-white">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <SiteHeader />
-        <main className="flex-1 bg-[#0f3040]">{children}</main>
+        <main className="flex-1 bg-[#101820]">{children}</main>
         <SiteFooter />
       </body>
     </html>

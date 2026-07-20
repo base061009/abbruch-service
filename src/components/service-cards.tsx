@@ -22,9 +22,9 @@ export function ServiceCards() {
         return (
           <article
             key={service.slug}
-            className="rounded-xl border border-white/12 bg-[#1a4558] p-6 shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-0.5 hover:border-[#ffcf00]/40 hover:bg-[#1f5268] hover:shadow-[0_12px_28px_rgba(0,0,0,0.3)]"
+            className="rounded-xl border border-white/12 bg-[#1a252f] p-6 shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-0.5 hover:border-[#f2aa4c]/40 hover:bg-[#1f2d3a] hover:shadow-[0_12px_28px_rgba(0,0,0,0.3)]"
           >
-            <span className="flex size-11 items-center justify-center rounded-lg bg-[#ffcf00] text-[#0f3040]">
+            <span className="flex size-11 items-center justify-center rounded-lg bg-[#f2aa4c] text-[#101820]">
               <Icon className="size-5" aria-hidden />
             </span>
             <h2 className="mt-5 text-xl font-bold tracking-tight text-white">

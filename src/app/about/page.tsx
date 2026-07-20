@@ -44,7 +44,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto w-full max-w-3xl px-5 py-12 sm:px-6 sm:py-16">
       <header>
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#ffcf00] uppercase">
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
           Über uns
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -95,7 +95,7 @@ export default function AboutPage() {
             href={siteConfig.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-[#ffcf00]/40 hover:text-[#ffcf00]"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-[#f2aa4c]/40 hover:text-[#f2aa4c]"
           >
             <InstagramIcon className="size-4" />
             Instagram
@@ -104,7 +104,7 @@ export default function AboutPage() {
             href={siteConfig.social.tiktok}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-[#ffcf00]/40 hover:text-[#ffcf00]"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:border-[#f2aa4c]/40 hover:text-[#f2aa4c]"
           >
             <TikTokIcon className="size-4" />
             TikTok

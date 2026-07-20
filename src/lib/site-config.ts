@@ -3,20 +3,20 @@
  * Name, Kontaktdaten, Social Links und Navigation hier anpassen.
  */
 export const siteConfig = {
-  name: "Das Abbruchservice",
-  shortName: "Abbruchservice",
+  name: "Wiener Entkernung",
+  shortName: "Wiener Entkernung",
   tagline: "Sauber. Sicher. Termingerecht.",
   description:
     "Professioneller Abbruch, Entkernung und Entrümpelung in Österreich – von der Planung bis zur Entsorgung.",
   shareText:
-    "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Das Abbruchservice.",
+    "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Wiener Entkernung.",
   ogImage: "/preview.jpg",
   ogImageSquare: "/preview-square.jpg",
   url: "https://abbruch-service.vercel.app",
   locale: "de_AT",
   phone: "0677 629 359 03",
   phoneHref: "tel:+4367762935903",
-  email: "office@das-abbruchservice.at",
+  email: "office@wiener-entkernung.at",
   address: {
     street: "Mitterhofergasse 15/5",
     zip: "1210",
@@ -28,13 +28,13 @@ export const siteConfig = {
     tiktok: "https://www.tiktok.com/@dasabbruchservice",
   },
   legal: {
-    companyName: "Das Abbruchservice",
-    legalForm: "Einzelunternehmen",
-    managingDirector: "Minel Alic",
-    uid: "ATU12345678",
-    companyRegister: "FN 123456a",
-    registerCourt: "Handelsgericht Wien",
+    companyName: "Wiener Entkernung",
+    owner: "Minel Alić",
+    gisaNumber: "38012426",
+    supervisoryAuthority: "Magistrat der Stadt Wien",
     chamber: "Wirtschaftskammer Wien",
+    tradeDescription:
+      "Entrümpler (Räumung durch Entfernung wertlosen Gutes)",
   },
 } as const;
 
@@ -112,6 +112,16 @@ export const projects = [
       "Entkernung einer Altbauwohnung – Böden, Installationen und nicht tragende Bauteile entfernt.",
     before: "/pics/vorher-3.jpeg",
     after: "/pics/nachher-3.jpeg",
+  },
+  {
+    id: "4",
+    title: "Brandschaden-Entrümpelung",
+    location: "Wien",
+    year: "2025",
+    description:
+      "Entrümpelung einer abgebrannten Wohnung – Brandreste und beschädigtes Inventar vollständig entfernt und entsorgt.",
+    before: "/pics/vorher-4.jpeg",
+    after: "/pics/nachher-4.jpeg",
   },
 ] as const;
 

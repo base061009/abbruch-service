@@ -25,10 +25,10 @@ export function ProjectGrid() {
             <button
               type="button"
               onClick={() => setSelected(project)}
-              className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/10 bg-[#1a4558] text-left shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-0.5 hover:border-[#ffcf00]/35 hover:shadow-[0_12px_28px_rgba(0,0,0,0.3)] focus-visible:ring-2 focus-visible:ring-[#ffcf00] focus-visible:outline-none"
+              className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-white/10 bg-[#1a252f] text-left shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-0.5 hover:border-[#f2aa4c]/35 hover:shadow-[0_12px_28px_rgba(0,0,0,0.3)] focus-visible:ring-2 focus-visible:ring-[#f2aa4c] focus-visible:outline-none"
             >
               <div className="grid shrink-0 grid-cols-2 gap-px bg-white/10">
-                <div className="relative aspect-[4/3] bg-[#143a4d]">
+                <div className="relative aspect-[4/3] bg-[#151d26]">
                   <Image
                     src={project.before}
                     alt={`${project.title} – Vorher`}
@@ -37,11 +37,11 @@ export function ProjectGrid() {
                     sizes="(max-width: 640px) 50vw, 25vw"
                     unoptimized
                   />
-                  <span className="absolute bottom-2 left-2 rounded bg-[#0f3040]/85 px-1.5 py-0.5 text-[10px] font-semibold text-white">
+                  <span className="absolute bottom-2 left-2 rounded bg-[#101820]/85 px-1.5 py-0.5 text-[10px] font-semibold text-white">
                     Vorher
                   </span>
                 </div>
-                <div className="relative aspect-[4/3] bg-[#143a4d]">
+                <div className="relative aspect-[4/3] bg-[#151d26]">
                   <Image
                     src={project.after}
                     alt={`${project.title} – Nachher`}
@@ -50,7 +50,7 @@ export function ProjectGrid() {
                     sizes="(max-width: 640px) 50vw, 25vw"
                     unoptimized
                   />
-                  <span className="absolute right-2 bottom-2 rounded bg-[#ffcf00] px-1.5 py-0.5 text-[10px] font-semibold text-[#0f3040]">
+                  <span className="absolute right-2 bottom-2 rounded bg-[#f2aa4c] px-1.5 py-0.5 text-[10px] font-semibold text-[#101820]">
                     Nachher
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export function ProjectGrid() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-white/60">
                   {project.description}
                 </p>
-                <p className="mt-3 text-sm font-semibold text-[#ffcf00]">
+                <p className="mt-3 text-sm font-semibold text-[#f2aa4c]">
                   Vergleich öffnen →
                 </p>
               </div>

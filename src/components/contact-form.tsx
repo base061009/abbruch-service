@@ -51,7 +51,7 @@ export function ContactForm() {
   if (state === "success") {
     return (
       <div
-        className="rounded-xl border border-[#ffcf00]/30 bg-[#ffcf00]/5 p-6 text-center"
+        className="rounded-xl border border-[#f2aa4c]/30 bg-[#f2aa4c]/5 p-6 text-center"
         role="status"
       >
         <p className="text-lg font-bold text-white">Nachricht gesendet</p>

@@ -1,4 +1,4 @@
-# Das Abbruchservice
+# Wiener Entkernung
 
 Website für Abbruch / Entkernung in Österreich – Next.js, Tailwind CSS, shadcn/ui.
 
@@ -13,7 +13,7 @@ npm run dev
 ## Zentrale Konfiguration
 
 - Markenname, Kontakt, Social, Legal: `src/lib/site-config.ts`
-- Farben (Türkis / Zitronengelb): `src/app/globals.css` (`--brand`, `--highlight`)
+- Farben (Navy / Gold): `src/app/globals.css` (`--brand` #101820, `--highlight` #F2AA4C)
 
 ## Seiten (URLs englisch)
 

@@ -12,7 +12,7 @@ export default function ProjectsPage() {
   return (
     <div className="mx-auto w-full max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
       <header className="max-w-2xl">
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#ffcf00] uppercase">
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
           Projekte
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">

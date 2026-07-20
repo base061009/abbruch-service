@@ -5,11 +5,11 @@ type ImpressumProps = {
 };
 
 /**
- * Eigenständige Impressum-Komponente (österreichisches MedienG / ECG).
- * Inhalte aus der zentralen siteConfig.
+ * Pflichtangaben gemäß § 5 ECG, § 63 GewO und § 25 MedienG
+ * für nicht im Firmenbuch eingetragene Einzelunternehmen.
  */
 export function Impressum({ className }: ImpressumProps) {
-  const { legal, address, phone, email, name } = siteConfig;
+  const { legal, address, phone, email } = siteConfig;
 
   return (
     <article className={className}>
@@ -17,27 +17,25 @@ export function Impressum({ className }: ImpressumProps) {
         Impressum
       </h1>
       <p className="mt-2 text-muted-foreground">
-        Angaben gemäß § 5 ECG und § 24 MedienG
+        Angaben gemäß § 5 ECG, § 63 GewO und § 25 MedienG
       </p>
 
       <div className="mt-8 space-y-8 text-sm leading-relaxed sm:text-base">
         <section>
           <h2 className="font-heading text-lg font-semibold">Medieninhaber</h2>
           <p className="mt-2">
-            {legal.companyName}
+            {legal.owner}
             <br />
-            {legal.legalForm}
+            {legal.companyName}
           </p>
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold">Sitz / Anschrift</h2>
+          <h2 className="font-heading text-lg font-semibold">Anschrift</h2>
           <p className="mt-2">
             {address.street}
             <br />
             {address.zip} {address.city}
-            <br />
-            {address.country}
           </p>
         </section>
 
@@ -57,49 +55,32 @@ export function Impressum({ className }: ImpressumProps) {
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold">Vertretung</h2>
-          <p className="mt-2">Inhaber: {legal.managingDirector}</p>
-        </section>
-
-        <section>
-          <h2 className="font-heading text-lg font-semibold">
-            Firmenbuch & UID
-          </h2>
-          <p className="mt-2">
-            Firmenbuchnummer: {legal.companyRegister}
-            <br />
-            Firmenbuchgericht: {legal.registerCourt}
-            <br />
-            UID-Nummer: {legal.uid}
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-heading text-lg font-semibold">
-            Mitgliedschaft
-          </h2>
-          <p className="mt-2">{legal.chamber}</p>
-        </section>
-
-        <section>
           <h2 className="font-heading text-lg font-semibold">
             Unternehmensgegenstand
           </h2>
-          <p className="mt-2">
-            Abbruch-, Entkernungs- und Entrümpelungsarbeiten sowie damit
-            verbundene Dienstleistungen unter dem Namen {name}.
-          </p>
+          <p className="mt-2">{legal.tradeDescription}</p>
         </section>
 
         <section>
           <h2 className="font-heading text-lg font-semibold">
-            Haftungsausschluss
+            Mitgliedschaft & Aufsicht
           </h2>
-          <p className="mt-2 text-muted-foreground">
-            Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine
-            Haftung für die Inhalte externer Links. Für den Inhalt der
-            verlinkten Seiten sind ausschließlich deren Betreiber
-            verantwortlich. Alle Angaben ohne Gewähr.
+          <p className="mt-2">
+            {legal.chamber}
+            <br />
+            GISA-Zahl: {legal.gisaNumber}
+            <br />
+            Aufsichtsbehörde: {legal.supervisoryAuthority}
+            <br />
+            Berufsrecht:{" "}
+            <a
+              href="https://www.ris.bka.gv.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Gewerbeordnung (GewO)
+            </a>
           </p>
         </section>
       </div>

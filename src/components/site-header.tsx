@@ -20,7 +20,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/15 bg-[#0f3040]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/15 bg-[#101820]/90 backdrop-blur-md">
       <div className="grid h-14 w-full grid-cols-[1fr_auto] items-center gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:px-12 xl:px-16">
         <Link
           href="/"
@@ -45,7 +45,7 @@ export function SiteHeader() {
                 className={cn(
                   "rounded-full px-3 py-1 text-sm font-semibold transition-colors",
                   active
-                    ? "text-[#ffcf00]"
+                    ? "text-[#f2aa4c]"
                     : "text-white/70 hover:text-white",
                 )}
               >
@@ -69,7 +69,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[min(100%,20rem)] border-white/10 bg-[#0f3040] text-white"
+              className="w-[min(100%,20rem)] border-white/10 bg-[#101820] text-white"
             >
               <SheetHeader>
                 <SheetTitle className="text-left text-xl font-bold text-white">
@@ -93,7 +93,7 @@ export function SiteHeader() {
                       className={cn(
                         "rounded-full px-4 py-3 text-lg font-semibold transition-colors",
                         active
-                          ? "text-[#ffcf00]"
+                          ? "text-[#f2aa4c]"
                           : "text-white/80 hover:bg-white/10 hover:text-white",
                       )}
                     >

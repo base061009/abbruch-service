@@ -25,7 +25,7 @@ export default function HomePage() {
       </div>
 
       <div className="order-1 lg:order-2 lg:pl-2">
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#ffcf00] uppercase">
+        <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
           Abbruch · Entkernung · Entrümpelung
         </p>
         <h1 className="mt-4 text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl xl:text-6xl">
@@ -48,7 +48,7 @@ export default function HomePage() {
             asChild
             variant="outline"
             size="lg"
-            className="h-11 rounded-lg border-2 border-[#ffcf00]/70 bg-transparent px-8 text-base font-semibold text-[#ffcf00] hover:bg-[#ffcf00]/10 hover:text-[#ffcf00]"
+            className="h-11 rounded-lg border-2 border-[#f2aa4c]/70 bg-transparent px-8 text-base font-semibold text-[#f2aa4c] hover:bg-[#f2aa4c]/10 hover:text-[#f2aa4c]"
           >
             <Link href="/services">Mehr erfahren</Link>
           </Button>

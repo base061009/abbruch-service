@@ -22,6 +22,8 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-heading text-lg font-semibold">1. Verantwortlicher</h2>
           <p className="mt-2">
+            {siteConfig.legal.owner}
+            <br />
             {siteConfig.legal.companyName}
             <br />
             {siteConfig.address.street}

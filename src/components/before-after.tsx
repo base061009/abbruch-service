@@ -40,7 +40,7 @@ export function BeforeAfter({
         aria-valuemax={100}
         aria-valuenow={Math.round(position)}
         aria-label="Vorher-Nachher Vergleich"
-        className="relative aspect-[3/4] w-full touch-none select-none overflow-hidden rounded-xl bg-[#143a4d] ring-1 ring-white/15 lg:aspect-[5/4] lg:min-h-[28rem] xl:min-h-[32rem]"
+        className="relative aspect-[3/4] w-full touch-none select-none overflow-hidden rounded-xl bg-[#151d26] ring-1 ring-white/15 lg:aspect-[5/4] lg:min-h-[28rem] xl:min-h-[32rem]"
         onPointerDown={(e) => {
           e.preventDefault();
           dragging.current = true;
@@ -82,18 +82,18 @@ export function BeforeAfter({
 
         {/* Trennlinie + Griff */}
         <div
-          className="pointer-events-none absolute inset-y-0 z-10 w-1 -translate-x-1/2 bg-[#ffcf00]"
+          className="pointer-events-none absolute inset-y-0 z-10 w-1 -translate-x-1/2 bg-[#f2aa4c]"
           style={{ left: `${position}%` }}
         >
-          <div className="absolute top-1/2 left-1/2 flex size-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#ffcf00] text-sm font-bold text-[#0f3040] shadow-lg ring-2 ring-[#0f3040]">
+          <div className="absolute top-1/2 left-1/2 flex size-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#f2aa4c] text-sm font-bold text-[#101820] shadow-lg ring-2 ring-[#101820]">
             ↔
           </div>
         </div>
 
-        <span className="pointer-events-none absolute top-3 left-3 z-10 rounded bg-[#0f3040]/85 px-2 py-1 text-xs font-semibold text-white">
+        <span className="pointer-events-none absolute top-3 left-3 z-10 rounded bg-[#101820]/85 px-2 py-1 text-xs font-semibold text-white">
           Vorher
         </span>
-        <span className="pointer-events-none absolute top-3 right-3 z-10 rounded bg-[#ffcf00] px-2 py-1 text-xs font-semibold text-[#0f3040]">
+        <span className="pointer-events-none absolute top-3 right-3 z-10 rounded bg-[#f2aa4c] px-2 py-1 text-xs font-semibold text-[#101820]">
           Nachher
         </span>
       </div>
