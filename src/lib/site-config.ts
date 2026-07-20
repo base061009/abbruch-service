@@ -2,13 +2,26 @@
  * Zentrale Marken- & Site-Konfiguration.
  * Name, Kontaktdaten, Social Links und Navigation hier anpassen.
  */
-const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://wiener-entkernung.at"
-).replace(/\/$/, "");
+const PRODUCTION_URL = "https://wiener-entkernung.at";
+
+/** Prefer env URL, but never use a Vercel preview/deployment host for SEO. */
+function resolveSiteUrl(): string {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  if (!fromEnv) return PRODUCTION_URL;
+  try {
+    const { hostname } = new URL(fromEnv);
+    if (/vercel\.app$/i.test(hostname)) return PRODUCTION_URL;
+    return fromEnv;
+  } catch {
+    return PRODUCTION_URL;
+  }
+}
 
 export const siteConfig = {
   name: "Wiener Entkernung",
   shortName: "Wiener Entkernung",
+  title:
+    "Wiener Entkernung | Abbruch, Entkernung & Entrümpelung in Wien",
   tagline: "Sauber. Sicher. Termingerecht.",
   description:
     "Professioneller Abbruch, Entkernung und Entrümpelung in Österreich – von der Planung bis zur Entsorgung.",
@@ -16,9 +29,10 @@ export const siteConfig = {
     "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Wiener Entkernung.",
   ogImage: "/preview.jpg",
   ogImageSquare: "/preview-square.jpg",
-  url: siteUrl,
+  url: resolveSiteUrl(),
   locale: "de_AT",
   phone: "0677 629 359 03",
+  phoneE164: "+4367762935903",
   phoneHref: "tel:+4367762935903",
   email: "office@wiener-entkernung.at",
   address: {

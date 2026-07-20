@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: {
-    absolute: siteConfig.shortName,
+    absolute: siteConfig.title,
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },

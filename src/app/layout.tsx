@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.shortName,
+    default: siteConfig.title,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: "/",
     siteName: siteConfig.shortName,
-    title: siteConfig.shortName,
+    title: siteConfig.title,
     description: siteConfig.shareText,
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.shortName,
+    title: siteConfig.title,
     description: siteConfig.shareText,
     images: [siteConfig.ogImage],
   },
@@ -88,7 +88,8 @@ export default function RootLayout({
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    telephone: siteConfig.phone,
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
+    telephone: siteConfig.phoneE164,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -97,7 +98,10 @@ export default function RootLayout({
       addressLocality: siteConfig.address.city,
       addressCountry: "AT",
     },
-    areaServed: "AT",
+    areaServed: [
+      { "@type": "City", name: "Wien" },
+      { "@type": "Country", name: "Österreich" },
+    ],
   };
 
   return (
