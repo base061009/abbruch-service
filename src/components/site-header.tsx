@@ -24,7 +24,7 @@ export function SiteHeader() {
       <div className="grid h-14 w-full grid-cols-[1fr_auto] items-center gap-4 px-5 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:px-12 xl:px-16">
         <Link
           href="/"
-          className="justify-self-start text-lg font-bold tracking-tight text-white"
+          className="font-brand justify-self-start text-lg font-semibold tracking-[0.04em] text-white uppercase sm:text-xl"
         >
           {siteConfig.name}
         </Link>
@@ -72,7 +72,7 @@ export function SiteHeader() {
               className="w-[min(100%,20rem)] border-white/10 bg-[#101820] text-white"
             >
               <SheetHeader>
-                <SheetTitle className="text-left text-xl font-bold text-white">
+                <SheetTitle className="font-brand text-left text-xl font-semibold tracking-[0.04em] text-white uppercase">
                   {siteConfig.name}
                 </SheetTitle>
               </SheetHeader>

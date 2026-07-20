@@ -51,27 +51,15 @@ export default function PrivacyPage() {
             Website.
           </p>
           <p className="mt-3 text-muted-foreground">
-            Über das Kontaktformular verarbeiten wir Ihren Namen, Ihre
-            E-Mail-Adresse, optional Ihre Telefonnummer sowie den Inhalt Ihrer
-            Nachricht, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b
-            DSGVO).
+            Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir
+            die von Ihnen mitgeteilten Daten (z. B. Name, E-Mail-Adresse,
+            Telefonnummer, Inhalt der Nachricht), um Ihre Anfrage zu
+            beantworten (Art. 6 Abs. 1 lit. b DSGVO).
           </p>
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold">
-            3. Weitergabe an Dienstleister
-          </h2>
-          <p className="mt-2 text-muted-foreground">
-            Für den E-Mail-Versand nutzen wir Resend. Dabei werden die im
-            Formular angegebenen Daten an Resend übermittelt, soweit dies zur
-            Zustellung erforderlich ist. Es gilt die Datenschutzerklärung von
-            Resend.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="font-heading text-lg font-semibold">4. Speicherdauer</h2>
+          <h2 className="font-heading text-lg font-semibold">3. Speicherdauer</h2>
           <p className="mt-2 text-muted-foreground">
             Personenbezogene Daten werden nur so lange gespeichert, wie es für
             die jeweiligen Zwecke erforderlich ist oder gesetzliche
@@ -80,7 +68,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold">5. Ihre Rechte</h2>
+          <h2 className="font-heading text-lg font-semibold">4. Ihre Rechte</h2>
           <p className="mt-2 text-muted-foreground">
             Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
             Einschränkung der Verarbeitung, Datenübertragbarkeit sowie
@@ -90,7 +78,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold">6. Cookies</h2>
+          <h2 className="font-heading text-lg font-semibold">5. Cookies</h2>
           <p className="mt-2 text-muted-foreground">
             Diese Website setzt derzeit keine nicht-essentiellen Tracking-Cookies
             ein. Technisch notwendige Cookies können für den Betrieb der Seite
@@ -99,7 +87,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="font-heading text-lg font-semibold">7. Aktualität</h2>
+          <h2 className="font-heading text-lg font-semibold">6. Aktualität</h2>
           <p className="mt-2 text-muted-foreground">
             Stand: {new Date().toLocaleDateString("de-AT", { year: "numeric", month: "long" })}.
             Wir behalten uns vor, diese Erklärung anzupassen, wenn sich

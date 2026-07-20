@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Serif_4, Geist_Mono } from "next/font/google";
+import { Source_Serif_4, Oswald, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
@@ -7,6 +7,12 @@ import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
   variable: "--font-serif",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
   display: "swap",
 });
@@ -109,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="de-AT"
-      className={`${sourceSerif.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${sourceSerif.variable} ${oswald.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[#101820] font-sans text-white">
         <script

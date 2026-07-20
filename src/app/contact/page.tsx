@@ -1,74 +1,100 @@
 import type { Metadata } from "next";
-import { Phone } from "lucide-react";
-import { ContactForm } from "@/components/contact-form";
-import { Button } from "@/components/ui/button";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder Nachricht für Ihr Abbruchprojekt.`,
+  description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Abbruchprojekt.`,
   alternates: { canonical: "/contact" },
 };
 
+const mailtoHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
+  `Anfrage – ${siteConfig.name}`,
+)}`;
+
+const mapsHref = `https://maps.google.com/?q=${encodeURIComponent(
+  `${siteConfig.address.street}, ${siteConfig.address.zip} ${siteConfig.address.city}`,
+)}`;
+
 export default function ContactPage() {
   return (
-    <div className="w-full px-5 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
-      <header className="max-w-3xl">
+    <div className="relative w-full overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(ellipse_at_top,_rgba(242,170,76,0.12),_transparent_60%)]"
+      />
+
+      <div className="relative mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
           Kontakt
         </p>
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          Kontakt aufnehmen
+          Einfach melden
         </h1>
-        <p className="mt-4 text-lg leading-relaxed text-white/60">
-          Kurz anrufen oder Nachricht schreiben – wir beraten Sie unverbindlich.
+        <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-white/60">
+          Anruf oder kurze Mail – wir beraten Sie unverbindlich zu Abbruch,
+          Entkernung und Entrümpelung.
         </p>
-      </header>
+      </div>
 
-      <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-x-24 xl:gap-x-32 lg:gap-y-16">
-        <div className="space-y-8 lg:pr-6">
-          <div className="rounded-xl border border-white/10 p-6 sm:p-8">
-            <h2 className="text-xl font-bold tracking-tight text-white">
-              Direkt anrufen
-            </h2>
-            <p className="mt-2 text-sm text-white/55">
-              Auf dem Handy öffnet sich die Telefon-App.
-            </p>
-            <Button asChild size="lg" className="mt-5 h-11 rounded-lg px-6 font-semibold">
-              <a href={siteConfig.phoneHref}>
-                <Phone className="size-4" />
-                Anrufen – {siteConfig.phone}
-              </a>
-            </Button>
-          </div>
+      <div className="relative mx-auto mt-12 flex max-w-lg flex-col gap-4 sm:mt-14">
+        <a
+          href={siteConfig.phoneHref}
+          className="group flex min-h-16 items-center gap-4 rounded-xl bg-[#f2aa4c] px-5 py-4 text-[#101820] transition-transform active:scale-[0.99] sm:px-6"
+        >
+          <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#101820]/10">
+            <Phone className="size-5" aria-hidden />
+          </span>
+          <span className="min-w-0 flex-1 text-left">
+            <span className="block text-xs font-semibold tracking-wide uppercase opacity-70">
+              Anrufen
+            </span>
+            <span className="mt-0.5 block text-lg font-bold tracking-tight sm:text-xl">
+              {siteConfig.phone}
+            </span>
+          </span>
+        </a>
 
-          <div className="space-y-2 text-sm text-white/55">
-            <p>
-              <span className="font-semibold text-white">E-Mail:</span>{" "}
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="text-[#f2aa4c] hover:underline"
-              >
-                {siteConfig.email}
-              </a>
-            </p>
-            <p>
-              <span className="font-semibold text-white">Adresse:</span>{" "}
-              {siteConfig.address.street}, {siteConfig.address.zip}{" "}
-              {siteConfig.address.city}
-            </p>
-          </div>
-        </div>
+        <a
+          href={mailtoHref}
+          className="group flex min-h-16 items-center gap-4 rounded-xl border border-white/15 bg-white/[0.04] px-5 py-4 text-white transition-colors hover:border-[#f2aa4c]/45 hover:bg-white/[0.07] active:scale-[0.99] sm:px-6"
+        >
+          <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-[#f2aa4c]/15 text-[#f2aa4c]">
+            <Mail className="size-5" aria-hidden />
+          </span>
+          <span className="min-w-0 flex-1 text-left">
+            <span className="block text-xs font-semibold tracking-wide text-white/50 uppercase">
+              E-Mail schreiben
+            </span>
+            <span className="mt-0.5 block truncate text-lg font-bold tracking-tight text-[#f2aa4c] sm:text-xl">
+              {siteConfig.email}
+            </span>
+          </span>
+        </a>
+      </div>
 
-        <div className="lg:border-l lg:border-white/10 lg:pl-12 xl:pl-16">
-          <h2 className="text-xl font-bold tracking-tight text-white">
-            Nachricht per E-Mail
-          </h2>
-          <p className="mt-1 mb-6 text-sm text-white/55">
-            Formular wird über Resend zugestellt.
-          </p>
-          <ContactForm />
-        </div>
+      <div className="relative mx-auto mt-12 max-w-lg border-t border-white/10 pt-8 text-center sm:mt-14">
+        <a
+          href={mapsHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex max-w-full items-start gap-3 text-left transition-colors hover:text-[#f2aa4c]"
+        >
+          <MapPin
+            className="mt-0.5 size-5 shrink-0 text-[#f2aa4c]"
+            aria-hidden
+          />
+          <span>
+            <span className="block text-xs font-semibold tracking-wide text-white/45 uppercase">
+              Adresse
+            </span>
+            <span className="mt-1 block text-base leading-relaxed text-white/80">
+              {siteConfig.address.street}
+              <br />
+              {siteConfig.address.zip} {siteConfig.address.city}
+            </span>
+          </span>
+        </a>
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ Website für Abbruch / Entkernung in Österreich – Next.js, Tailwind CSS, shad
 ## Start
 
 ```bash
-cp .env.example .env.local
 npm install
 npm run dev
 ```
@@ -26,11 +25,3 @@ npm run dev
 | Kontakt | `/contact` |
 | Impressum | `/imprint` |
 | Datenschutz | `/privacy` |
-
-## Kontaktformular (Resend)
-
-In `.env.local`:
-
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL`
-- `CONTACT_FROM_EMAIL`
