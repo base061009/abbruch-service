@@ -35,20 +35,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
+    // Relative → resolved via metadataBase (never VERCEL_URL)
     url: "/",
     siteName: siteConfig.shortName,
     title: siteConfig.title,
     description: siteConfig.shareText,
+    // Absolute URLs: Next.js otherwise may rewrite relative og:image via VERCEL_URL
     images: [
       {
-        url: siteConfig.ogImage,
+        url: siteConfig.ogImageAbsolute,
         type: "image/jpeg",
         width: 1200,
         height: 630,
         alt: `${siteConfig.shortName} – Abbruch & Entkernung`,
       },
       {
-        url: siteConfig.ogImageSquare,
+        url: siteConfig.ogImageSquareAbsolute,
         type: "image/jpeg",
         width: 400,
         height: 400,
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.shareText,
-    images: [siteConfig.ogImage],
+    images: [siteConfig.ogImageAbsolute],
   },
   robots: {
     index: true,
@@ -88,7 +90,7 @@ export default function RootLayout({
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    image: `${siteConfig.url}${siteConfig.ogImage}`,
+    image: siteConfig.ogImageAbsolute,
     telephone: siteConfig.phoneE164,
     email: siteConfig.email,
     address: {

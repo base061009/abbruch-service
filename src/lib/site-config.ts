@@ -1,20 +1,43 @@
 /**
  * Zentrale Marken- & Site-Konfiguration.
  * Name, Kontaktdaten, Social Links und Navigation hier anpassen.
+ *
+ * SEO-URLs laufen ausschließlich über `url` / `absoluteUrl()`.
+ * Niemals VERCEL_URL / VERCEL_BRANCH_URL / VERCEL_PROJECT_PRODUCTION_URL –
+ * Next.js würde die sonst intern für relative og:image-URLs nutzen.
  */
-const PRODUCTION_URL = "https://wiener-entkernung.at";
+export const PRODUCTION_SITE_URL = "https://wiener-entkernung.at";
 
-/** Prefer env URL, but never use a Vercel preview/deployment host for SEO. */
+/**
+ * Canonical production host only.
+ * Uses NEXT_PUBLIC_SITE_URL when set to a non-Vercel host; otherwise
+ * PRODUCTION_SITE_URL. Never falls back to VERCEL_* env vars.
+ */
 function resolveSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
-  if (!fromEnv) return PRODUCTION_URL;
+  if (!fromEnv) return PRODUCTION_SITE_URL;
+
   try {
-    const { hostname } = new URL(fromEnv);
-    if (/vercel\.app$/i.test(hostname)) return PRODUCTION_URL;
+    const { hostname, protocol } = new URL(fromEnv);
+    if (protocol !== "http:" && protocol !== "https:") {
+      return PRODUCTION_SITE_URL;
+    }
+    // Reject Vercel deployment hosts so SEO never points at *.vercel.app
+    if (hostname === "vercel.app" || hostname.endsWith(".vercel.app")) {
+      return PRODUCTION_SITE_URL;
+    }
     return fromEnv;
   } catch {
-    return PRODUCTION_URL;
+    return PRODUCTION_SITE_URL;
   }
+}
+
+const siteUrl = resolveSiteUrl();
+
+/** Build an absolute URL on the production site (path must start with `/` or be empty). */
+export function absoluteUrl(path: string = "/"): string {
+  if (!path || path === "/") return siteUrl;
+  return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
 export const siteConfig = {
@@ -27,9 +50,12 @@ export const siteConfig = {
     "Professioneller Abbruch, Entkernung und Entrümpelung in Österreich – von der Planung bis zur Entsorgung.",
   shareText:
     "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Wiener Entkernung.",
+  /** Relative path – prefer `ogImageAbsolute` for metadata to bypass Next VERCEL_URL fallback. */
   ogImage: "/preview.jpg",
   ogImageSquare: "/preview-square.jpg",
-  url: resolveSiteUrl(),
+  ogImageAbsolute: absoluteUrl("/preview.jpg"),
+  ogImageSquareAbsolute: absoluteUrl("/preview-square.jpg"),
+  url: siteUrl,
   locale: "de_AT",
   phone: "0677 629 359 03",
   phoneE164: "+4367762935903",

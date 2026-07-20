@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Kontakt",
   description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Abbruchprojekt.`,
   alternates: { canonical: "/contact" },
+  openGraph: { url: "/contact" },
 };
 
 const mailtoHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(

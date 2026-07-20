@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Dienstleistungen",
   description: `Komplettentkernung, Bad- und Küchenentkernung – Leistungen von ${siteConfig.name}.`,
   alternates: { canonical: "/services" },
+  openGraph: { url: "/services" },
 };
 
 export default function ServicesPage() {

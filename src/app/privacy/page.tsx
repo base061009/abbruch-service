@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: `Datenschutzerklärung von ${siteConfig.name}.`,
   robots: { index: true, follow: true },
   alternates: { canonical: "/privacy" },
+  openGraph: { url: "/privacy" },
 };
 
 export default function PrivacyPage() {

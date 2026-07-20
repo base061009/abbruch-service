@@ -13,7 +13,7 @@ npm run dev
 ## Zentrale Konfiguration
 
 - Markenname, Kontakt, Social, Legal: `src/lib/site-config.ts`
-- Site-URL (SEO / sitemap): `NEXT_PUBLIC_SITE_URL` in `.env*` (Default: `https://wiener-entkernung.at`)
+- Site-URL (SEO / sitemap): `NEXT_PUBLIC_SITE_URL` in `.env*` (Fallback: `https://wiener-entkernung.at`; niemals `VERCEL_URL` / `*.vercel.app`)
 - Farben (Navy / Gold): `src/app/globals.css` (`--brand` #101820, `--highlight` #F2AA4C)
 
 ## Seiten (URLs englisch)

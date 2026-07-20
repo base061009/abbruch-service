@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },
+  openGraph: { url: "/" },
 };
 
 export default function HomePage() {

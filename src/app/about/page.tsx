@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Über uns",
   description: `Lernen Sie ${siteConfig.name} kennen – Ihr Partner für Abbruch und Entkernung in Österreich.`,
   alternates: { canonical: "/about" },
+  openGraph: { url: "/about" },
 };
 
 function InstagramIcon({ className }: { className?: string }) {

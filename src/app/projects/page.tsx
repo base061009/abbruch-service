@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Abgeschlossene Projekte",
   description: `Einblicke in abgeschlossene Abbruch- und Entkernungsprojekte von ${siteConfig.name}.`,
   alternates: { canonical: "/projects" },
+  openGraph: { url: "/projects" },
 };
 
 export default function ProjectsPage() {

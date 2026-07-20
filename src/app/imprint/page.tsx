@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description: `Impressum und Anbieterkennzeichnung von ${siteConfig.name}.`,
   robots: { index: true, follow: true },
   alternates: { canonical: "/imprint" },
+  openGraph: { url: "/imprint" },
 };
 
 export default function ImprintPage() {
