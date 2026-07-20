@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -54,17 +53,6 @@ export default function AboutPage() {
           Abbruch und Entkernung mit Haltung.
         </p>
       </header>
-
-      <div className="relative mt-8 aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/15">
-        <Image
-          src="/about-us.jpeg"
-          alt={`${siteConfig.name} – Über uns`}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 768px"
-          priority
-        />
-      </div>
 
       <div className="mt-8 space-y-4 text-base leading-relaxed text-white/75">
         <p>

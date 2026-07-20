@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Wiener Entkernung">
+  <!-- Navy badge + gold abstract hammer -->
+  <rect width="64" height="64" rx="14" fill="#101820"/>
+  <g transform="translate(32 33) rotate(-20) translate(-32 -33)">
+    <rect x="16" y="16" width="32" height="12" rx="2" fill="#F2AA4C"/>
+    <rect x="28" y="26" width="8" height="22" rx="2" fill="#F2AA4C"/>
+  </g>
+</svg>

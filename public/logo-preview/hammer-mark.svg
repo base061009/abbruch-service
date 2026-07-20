@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Wiener Entkernung">
+  <!-- Ultra-simple T hammer, upright, max legibility -->
+  <rect x="10" y="12" width="44" height="16" rx="3" fill="#101820"/>
+  <rect x="10" y="12" width="10" height="16" rx="3" fill="#F2AA4C"/>
+  <rect x="26" y="26" width="12" height="28" rx="3" fill="#101820"/>
+</svg>

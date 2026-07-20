@@ -66,7 +66,7 @@ export default function ContactPage() {
             <span className="block text-xs font-semibold tracking-wide text-white/50 uppercase">
               E-Mail schreiben
             </span>
-            <span className="mt-0.5 block truncate text-lg font-bold tracking-tight text-[#f2aa4c] sm:text-xl">
+            <span className="mt-0.5 block break-all text-base font-bold leading-snug tracking-tight text-[#f2aa4c] sm:text-lg">
               {siteConfig.email}
             </span>
           </span>
