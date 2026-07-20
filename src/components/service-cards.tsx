@@ -2,7 +2,6 @@ import {
   Bath,
   Building2,
   CookingPot,
-  Hammer,
   type LucideIcon,
 } from "lucide-react";
 import { services } from "@/lib/site-config";
@@ -11,7 +10,6 @@ const icons: Record<(typeof services)[number]["icon"], LucideIcon> = {
   Building2,
   Bath,
   CookingPot,
-  Hammer,
 };
 
 export function ServiceCards() {

@@ -2,6 +2,10 @@
  * Zentrale Marken- & Site-Konfiguration.
  * Name, Kontaktdaten, Social Links und Navigation hier anpassen.
  */
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://wiener-entkernung.at"
+).replace(/\/$/, "");
+
 export const siteConfig = {
   name: "Wiener Entkernung",
   shortName: "Wiener Entkernung",
@@ -12,7 +16,7 @@ export const siteConfig = {
     "Abbruch · Entkernung · Entrümpelung in Österreich. Sauber. Sicher. Termingerecht. – Wiener Entkernung.",
   ogImage: "/preview.jpg",
   ogImageSquare: "/preview-square.jpg",
-  url: "https://abbruch-service.vercel.app",
+  url: siteUrl,
   locale: "de_AT",
   phone: "0677 629 359 03",
   phoneHref: "tel:+4367762935903",
@@ -72,13 +76,6 @@ export const services = [
     description:
       "Küchenzeilen, Geräte und Leitungen demontieren und entsorgen – präzise und termingerecht vor Ihrem Umbau.",
     icon: "CookingPot",
-  },
-  {
-    slug: "abbruch",
-    title: "Abbruch",
-    description:
-      "Teil- und Totalabbruch von Gebäuden – geplant, genehmigt und fachgerecht ausgeführt.",
-    icon: "Hammer",
   },
 ] as const;
 
