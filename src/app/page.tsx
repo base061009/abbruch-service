@@ -43,6 +43,17 @@ export default function HomePage() {
             beforeAlt={featured.beforeAlt}
             afterAlt={featured.afterAlt}
           />
+          <p className="mt-3 text-sm leading-relaxed text-white/50">
+            Beispielprojekt: {featured.title} – Freiräumung und Rückbau in Wien.
+            Weitere{" "}
+            <Link
+              href={routes.projects}
+              className="font-semibold text-[#f2aa4c] hover:underline"
+            >
+              Entkernungsprojekte in Wien
+            </Link>
+            .
+          </p>
         </div>
 
         <div className="order-1 lg:order-2 lg:pl-2">
@@ -53,9 +64,15 @@ export default function HomePage() {
             Entkernung &amp; Abbruch in Wien
           </h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/65 sm:text-xl">
-            {siteConfig.name} – professioneller Rückbau für Wohn- und
-            Gewerbeobjekte. Von der Besichtigung bis zur sauberen Übergabe:
-            klar, zuverlässig, termingerecht.
+            {siteConfig.name} ist Ihr Ansprechpartner für professionellen
+            Rückbau in Wien: Entkernung, Abbruch und Entrümpelung für Wohn- und
+            Gewerbeobjekte – von der Besichtigung bis zur sauberen Übergabe.
+          </p>
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-white/55">
+            Ob Komplettentkernung einer Wohnung, Bad- oder Küchenrückbau oder
+            Entrümpelung nach Brandschaden: Wir planen den Ablauf mit Ihnen,
+            arbeiten termingerecht und entsorgen fachgerecht. Klar, zuverlässig
+            und mit Fokus auf Wien und Umgebung.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -64,7 +81,9 @@ export default function HomePage() {
               size="lg"
               className="h-11 rounded-lg px-8 text-base font-semibold"
             >
-              <Link href={routes.contact}>Jetzt kontaktieren</Link>
+              <Link href={routes.contact}>
+                Angebot für Entkernung in Wien anfragen
+              </Link>
             </Button>
             <Button
               asChild
@@ -72,7 +91,9 @@ export default function HomePage() {
               size="lg"
               className="h-11 rounded-lg border-2 border-[#f2aa4c]/70 bg-transparent px-8 text-base font-semibold text-[#f2aa4c] hover:bg-[#f2aa4c]/10 hover:text-[#f2aa4c]"
             >
-              <Link href={routes.services}>Leistungen ansehen</Link>
+              <Link href={routes.services}>
+                Leistungen: Entkernung Wien ansehen
+              </Link>
             </Button>
           </div>
         </div>
@@ -80,7 +101,7 @@ export default function HomePage() {
 
       <section className="border-t border-white/10 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
         <div className="mx-auto w-full max-w-5xl">
-          <header className="max-w-2xl">
+          <header className="max-w-3xl">
             <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
               Leistungen
             </p>
@@ -88,19 +109,27 @@ export default function HomePage() {
               Entkernung für Wohnung, Bad und Küche
             </h2>
             <p className="mt-3 text-base leading-relaxed text-white/60 sm:text-lg">
-              Komplett-, Bad- und Küchenentkernung in Wien – inklusive Abtransport
-              und Entsorgung.
+              Als Spezialist für Entkernung Wien und Abbruch Wien übernehmen wir
+              Komplett-, Bad- und Küchenentkernung inklusive Abtransport und
+              Entsorgung. Jede Leistung ist auf Ihren Termin und Ihr Objekt
+              abgestimmt – für Wohnungen ebenso wie für Gewerbeflächen.
+            </p>
+            <p className="mt-3 text-base leading-relaxed text-white/55">
+              Sie planen eine Sanierung oder einen Umbau? Dann lohnt sich ein
+              klarer Rückbau vor den Folgegewerken. Wiener Entkernung sorgt
+              dafür, dass Flächen besenrein übergeben werden und Ihr Projekt
+              ohne Altlasten weiterlaufen kann.
             </p>
           </header>
           <div className="mt-10">
-            <ServiceCards />
+            <ServiceCards headingLevel="h3" />
           </div>
         </div>
       </section>
 
       <section className="border-t border-white/10 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
         <div className="mx-auto w-full max-w-5xl">
-          <header className="max-w-2xl">
+          <header className="max-w-3xl">
             <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
               Ablauf
             </p>
@@ -108,8 +137,8 @@ export default function HomePage() {
               Von der Anfrage bis zur Übergabe
             </h2>
             <p className="mt-3 text-base leading-relaxed text-white/60 sm:text-lg">
-              Vier klare Schritte – damit Ihr Rückbau planbar und terminsicher
-              bleibt.
+              Vier klare Schritte für Abbruch, Entkernung und Entrümpelung in
+              Wien – damit Ihr Rückbau planbar und terminsicher bleibt.
             </p>
           </header>
           <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -138,12 +167,15 @@ export default function HomePage() {
               Wien und Umgebung
             </h2>
             <p className="mt-3 text-base leading-relaxed text-white/60 sm:text-lg">
-              Wir entkernen und entrümpeln Wohn- und Gewerbeobjekte in Wien.
-              Projekte in ganz Österreich sind nach Absprache möglich.
+              Unser Schwerpunkt ist Entkernung und Entrümpelung in Wien.
+              Projekte in ganz Österreich sind nach Absprache möglich – vom
+              Altbau bis zur Gewerbefläche.
             </p>
           </div>
           <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-            <Link href={routes.projects}>Projekte ansehen</Link>
+            <Link href={routes.projects}>
+              Unsere Entkernungsprojekte in Wien
+            </Link>
           </Button>
         </div>
       </section>
@@ -161,11 +193,14 @@ export default function HomePage() {
               Unverbindliches Angebot anfordern
             </h2>
             <p className="mt-1 text-sm text-white/55">
-              Schildern Sie kurz Ihr Projekt in Wien – wir melden uns rasch.
+              Schildern Sie kurz Ihr Projekt in Wien – wir melden uns rasch zu
+              Entkernung, Abbruch oder Entrümpelung.
             </p>
           </div>
           <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-            <Link href={routes.contact}>Kontakt aufnehmen</Link>
+            <Link href={routes.contact}>
+              Jetzt Entkernung in Wien anfragen
+            </Link>
           </Button>
         </div>
       </section>

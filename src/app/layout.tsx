@@ -84,7 +84,7 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "HomeAndConstructionBusiness",
     "@id": absoluteUrl("/#business"),
     name: siteConfig.name,
     description: siteConfig.description,

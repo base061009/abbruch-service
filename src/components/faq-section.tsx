@@ -60,7 +60,7 @@ export function FaqSection({
           href={routes.contact}
           className="font-semibold text-[#f2aa4c] hover:underline"
         >
-          Kontakt aufnehmen
+          Angebot für Entkernung in Wien anfragen
         </Link>
       </p>
     </section>

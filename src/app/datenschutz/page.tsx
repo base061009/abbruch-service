@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Datenschutz",
-  description: `Datenschutzerklärung von ${siteConfig.name}.`,
+  title: "Datenschutz – Wiener Entkernung",
+  description:
+    "Datenschutzerklärung von Wiener Entkernung: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
   robots: { index: true, follow: true },
   alternates: { canonical: routes.privacy },
   openGraph: {
@@ -11,8 +12,9 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: routes.privacy,
     siteName: siteConfig.shortName,
-    title: `Datenschutz | ${siteConfig.shortName}`,
-    description: `Datenschutzerklärung von ${siteConfig.name}.`,
+    title: "Datenschutz – Wiener Entkernung",
+    description:
+      "Datenschutzerklärung von Wiener Entkernung gemäß DSGVO.",
   },
 };
 

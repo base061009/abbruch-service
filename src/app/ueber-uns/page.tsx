@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { siteConfig, routes } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Über uns",
-  description: `Lernen Sie ${siteConfig.name} kennen – Ihr Partner für Abbruch und Entkernung in Wien und Österreich.`,
+  title: "Über uns – Wiener Entkernung in Wien",
+  description:
+    "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien. Zuverlässig, termingerecht und mit klarer Kommunikation.",
   alternates: { canonical: routes.about },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: routes.about,
     siteName: siteConfig.shortName,
-    title: `Über uns | ${siteConfig.shortName}`,
-    description: `Lernen Sie ${siteConfig.name} kennen – Ihr Partner für Abbruch und Entkernung in Wien und Österreich.`,
+    title: "Über uns – Wiener Entkernung in Wien",
+    description:
+      "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien. Zuverlässig, termingerecht und mit klarer Kommunikation.",
   },
 };
 
@@ -58,34 +62,76 @@ export default function AboutPage() {
           {siteConfig.name} – Abbruch &amp; Entkernung in Wien
         </h1>
         <p className="mt-3 text-base text-white/60 sm:text-lg">
-          Abbruch und Entkernung mit Haltung.
+          Abbruch, Entkernung und Entrümpelung mit klarer Haltung: sauber,
+          zuverlässig, termingerecht.
         </p>
       </header>
 
       <div className="mt-8 space-y-4 text-base leading-relaxed text-white/75">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {siteConfig.name} steht für professionellen Rückbau in Wien.
+          Wir entkernen Wohnungen und Gewerbeflächen, übernehmen Bad- und
+          Küchenrückbau und unterstützen bei Entrümpelung – inklusive
+          Abtransport und Entsorgung. Unser Anspruch: jedes Objekt so zu
+          übergeben, dass Sanierung oder Umbau ohne Verzögerung starten können.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum.
+          Als lokaler Partner für Entkernung Wien und Abbruch Wien legen wir
+          Wert auf transparente Angebote, verlässliche Termine und respektvollen
+          Umgang mit Haus, Nachbarschaft und Gebäudesubstanz. Ob Altbau,
+          Terrasse oder Brandschaden: Wir planen den Ablauf mit Ihnen und halten
+          Sie über den Fortschritt auf dem Laufenden.
+        </p>
+        <h2 className="pt-2 text-xl font-bold text-white">
+          Wie wir arbeiten
+        </h2>
+        <p>
+          Jeder Auftrag beginnt mit einer Besichtigung und einer ehrlichen
+          Einschätzung des Umfangs. Danach erhalten Sie ein klares Angebot.
+          Bei der Ausführung achten wir auf Schutz angrenzender Bereiche,
+          sichere Entsorgungswege und eine besenreine Übergabe. So bleibt Ihr
+          Projekt planbar – von der ersten Anfrage bis zum Abschluss.
         </p>
         <p>
-          Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi
-          a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam
-          ultrices.
+          Sie möchten mehr über konkrete Aufträge erfahren? Sehen Sie sich
+          unsere{" "}
+          <Link
+            href={routes.projects}
+            className="font-semibold text-[#f2aa4c] hover:underline"
+          >
+            Entkernungsprojekte in Wien
+          </Link>{" "}
+          an oder fragen Sie direkt ein{" "}
+          <Link
+            href={routes.contact}
+            className="font-semibold text-[#f2aa4c] hover:underline"
+          >
+            Angebot für Entkernung in Wien
+          </Link>{" "}
+          an.
         </p>
       </div>
 
+      <div className="mt-10 flex flex-col items-start justify-between gap-6 rounded-xl border border-white/10 px-6 py-7 sm:flex-row sm:items-center sm:px-8">
+        <div>
+          <h2 className="text-xl font-bold tracking-tight text-white">
+            Lernen Sie unsere Leistungen kennen
+          </h2>
+          <p className="mt-1 text-sm text-white/55">
+            Komplett-, Bad- und Küchenentkernung – übersichtlich erklärt.
+          </p>
+        </div>
+        <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
+          <Link href={routes.services}>
+            Leistungen: Entkernung Wien ansehen
+          </Link>
+        </Button>
+      </div>
+
       <div className="mt-10 border-t border-white/10 pt-8">
-        <p className="text-xs font-semibold tracking-[0.2em] text-white/40 uppercase">
+        <h2 className="text-xs font-semibold tracking-[0.2em] text-white/40 uppercase">
           Folgen Sie uns
-        </p>
+        </h2>
         <div className="mt-4 flex flex-wrap gap-3">
           <a
             href={siteConfig.social.instagram}

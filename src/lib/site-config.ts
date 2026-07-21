@@ -116,12 +116,12 @@ export const processSteps = [
   {
     title: "Besichtigung",
     description:
-      "Wir nehmen das Objekt vor Ort auf, klären Umfang und Besonderheiten und besprechen Ihren Zeitplan.",
+      "Vor Ort in Wien klären wir Umfang, Zugang und Besonderheiten Ihres Objekts und stimmen den Zeitplan für Entkernung oder Entrümpelung ab.",
   },
   {
     title: "Angebot",
     description:
-      "Sie erhalten ein klares, unverbindliches Angebot – ohne versteckte Positionen.",
+      "Sie erhalten ein klares, unverbindliches Angebot für Abbruch, Entkernung oder Entrümpelung – ohne versteckte Positionen.",
   },
   {
     title: "Ausführung",
@@ -131,7 +131,7 @@ export const processSteps = [
   {
     title: "Übergabe",
     description:
-      "Saubere Übergabe der Fläche – bereit für Sanierung, Umbau oder Weiterverkauf.",
+      "Saubere Übergabe der Fläche in Wien – bereit für Sanierung, Umbau oder Weiterverkauf.",
   },
 ] as const;
 
@@ -166,7 +166,12 @@ export const services = [
     description:
       "Vollständige Entkernung von Wohnungen und Gebäuden – Innenausbau, Installationen und nicht tragende Bauteile fachgerecht entfernt.",
     longDescription:
-      "Bei der Komplettentkernung bereiten wir Wohnungen, Häuser und Gewerbeobjekte in Wien systematisch auf Umbau oder Sanierung vor. Wir entfernen Innenausbau, Bodenbeläge, nicht tragende Wände sowie Installationen und entsorgen das Material fachgerecht – damit die Fläche sauber und planbar weiterverwendet werden kann.",
+      "Bei der Komplettentkernung in Wien bereiten wir Wohnungen, Häuser und Gewerbeobjekte systematisch auf Umbau oder Sanierung vor. Wir entfernen Innenausbau, Bodenbeläge, nicht tragende Wände sowie Installationen und entsorgen das Material fachgerecht – damit die Fläche sauber und planbar weiterverwendet werden kann.",
+    body: [
+      "Eine Komplettentkernung in Wien ist sinnvoll, wenn Sie eine Wohnung, ein Haus oder eine Gewerbefläche grundlegend sanieren oder neu gestalten möchten. Wiener Entkernung übernimmt den strukturierten Rückbau: von Böden und Türen über nicht tragende Trennwände bis zu ausgewählten Installationen – abgestimmt auf Statik und Folgearbeitsgänge.",
+      "Wir arbeiten termingerecht und mit klarer Kommunikation gegenüber Auftraggeber, Hausverwaltung und Nachbarn. Abtransport und Entsorgung sind Teil des Auftrags, damit nach der Entkernung Wien kein Material liegen bleibt und Folgegewerke direkt starten können.",
+      "Ob Altbau oder Neubau: Vor dem Start klären wir Umfang, Zugang und Zeitfenster. So bleibt Ihre Komplettentkernung planbar – von der ersten Besichtigung bis zur besenreinen Übergabe.",
+    ],
     highlights: [
       "Wohnungen, Häuser und Gewerbeflächen",
       "Innenausbau und Installationen",
@@ -182,7 +187,12 @@ export const services = [
     description:
       "Sanitäranlagen, Fliesen und Installationen im Bad entfernen – sauber, staubarm und bereit für die Neuausstattung.",
     longDescription:
-      "Die Badentkernung ist der saubere Start für Ihre Badsanierung in Wien. Wir demontieren Sanitärobjekte, Fliesen, Estrichbereiche und Leitungen so, dass Folgegewerke zügig und ohne Altlasten weiterarbeiten können.",
+      "Die Badentkernung in Wien ist der saubere Start für Ihre Badsanierung. Wir demontieren Sanitärobjekte, Fliesen, Estrichbereiche und Leitungen so, dass Folgegewerke zügig und ohne Altlasten weiterarbeiten können.",
+    body: [
+      "Bei einer Badentkernung in Wien entfernen wir Wanne, Dusche, WC, Waschtische sowie Fliesen und zugehörige Untergründe. Ziel ist eine klare, trockene und zugängliche Fläche für Sanitär, Fliesenleger und Installateure.",
+      "Wir achten auf staubarme Arbeitsweise und Schutz angrenzender Räume – besonders wichtig in bewohnten Wohnungen. Entsorgungswege und Zwischenlagerung stimmen wir vorab ab, damit die Badentkernung zügig und ohne unnötige Belastung für Haus und Nachbarn läuft.",
+      "Ob Teilsanierung oder Komplettumbau: Nach der Demontage übergeben wir das Bad so, dass Folgegewerke ohne Zeitverlust starten können. Fragen Sie unverbindlich nach einem Termin für Ihre Badentkernung in Wien.",
+    ],
     highlights: [
       "Wanne, Dusche, WC und Waschtische",
       "Fliesen und Untergründe",
@@ -199,6 +209,11 @@ export const services = [
       "Küchenzeilen, Geräte und Leitungen demontieren und entsorgen – präzise und termingerecht vor Ihrem Umbau.",
     longDescription:
       "Vor dem Küchenumbau entfernen wir Zeilen, Geräte, Arbeitsplatten und zugehörige Anschlüsse. Die Küchenentkernung in Wien erfolgt präzise, damit Elektro, Sanitär und Möbelbauer direkt anschließen können.",
+    body: [
+      "Die Küchenentkernung in Wien schafft Platz für Ihre neue Küche: Wir demontieren Zeilen, Einbaugeräte, Arbeitsplatten und Verkleidungen und kümmern uns um den Abtransport. Anschlüsse und Leitungsrückbau erfolgen so, dass Folgegewerke klar und sicher weiterarbeiten können.",
+      "Gerade in Mehrparteienhäusern zählt eine kurze, gut abgestimmte Ausführung. Wiener Entkernung plant Zugänge, Entsorgungswege und Zeitfenster mit Ihnen – damit die Küchenentkernung den Hausalltag möglichst wenig stört.",
+      "Ob Mietwohnung, Eigentum oder Gewerbeküche: Nach der Entrümpelung und Demontage übergeben wir die Fläche besenrein. Fordern Sie ein Angebot für Ihre Küchenentkernung in Wien an.",
+    ],
     highlights: [
       "Küchenzeilen und Einbaugeräte",
       "Arbeitsplatten und Verkleidungen",
@@ -218,10 +233,14 @@ export const projects = [
     year: "2025",
     description:
       "Komplette Freiräumung und Rückbau einer Balkonterrassenfläche inkl. Entsorgung.",
+    longDescription:
+      "Für dieses Projekt in Wien haben wir eine stark belegte Balkonterrassenfläche freigeräumt und zurückgebaut. Inventar, Beläge und Rückstände wurden abtransportiert und entsorgt, sodass die Terrasse wieder nutzbar und bereit für die weitere Gestaltung war.",
     before: "/pics/vorher-1.jpeg",
     after: "/pics/nachher-1.jpeg",
-    beforeAlt: "Terrasse in Wien vor dem Rückbau – beladen und ungenutzt",
-    afterAlt: "Terrasse in Wien nach Freiräumung und Rückbau – saubere Fläche",
+    beforeAlt:
+      "Terrassenrückbau Wien – Zustand vorher mit beladener Balkonfläche",
+    afterAlt:
+      "Terrassenrückbau Wien – Zustand nachher nach Freiräumung und Entsorgung",
   },
   {
     id: "2",
@@ -231,10 +250,14 @@ export const projects = [
     year: "2025",
     description:
       "Komplettentkernung eines Wohnraums – Bodenbeläge und Innenausbau fachgerecht entfernt.",
+    longDescription:
+      "Bei dieser Wohnungsentkernung in Wien entfernten wir Bodenbeläge und Innenausbau fachgerecht, um die Fläche für die Sanierung freizumachen. Der Fokus lag auf einer sauberen Übergabe und der Entsorgung aller ausgebauten Materialien.",
     before: "/pics/vorher-2.jpeg",
     after: "/pics/nachher-2.jpeg",
-    beforeAlt: "Wohnung in Wien vor der Entkernung mit vorhandenem Innenausbau",
-    afterAlt: "Wohnung in Wien nach Komplettentkernung – ausgeräumter Rohbauzustand",
+    beforeAlt:
+      "Wohnungsentkernung Wien – Zustand vorher mit Innenausbau und Bodenbelägen",
+    afterAlt:
+      "Wohnungsentkernung Wien – Zustand nachher nach Komplettentkernung",
   },
   {
     id: "3",
@@ -244,10 +267,13 @@ export const projects = [
     year: "2024",
     description:
       "Entkernung einer Altbauwohnung – Böden, Installationen und nicht tragende Bauteile entfernt.",
+    longDescription:
+      "Die Altbau-Entkernung in Wien umfasste Böden, Installationen und nicht tragende Bauteile. Wir arbeiteten mit Rücksicht auf die Gebäudesubstanz und übergaben die Wohnung bereit für die weitere Sanierung.",
     before: "/pics/vorher-3.jpeg",
     after: "/pics/nachher-3.jpeg",
-    beforeAlt: "Altbauwohnung in Wien vor der Entkernung",
-    afterAlt: "Altbauwohnung in Wien nach Entkernung von Böden und Innenausbau",
+    beforeAlt: "Entkernung Altbauwohnung Wien – Zustand vorher",
+    afterAlt:
+      "Entkernung Altbauwohnung Wien – Zustand nachher ohne Böden und Innenausbau",
   },
   {
     id: "4",
@@ -257,10 +283,14 @@ export const projects = [
     year: "2025",
     description:
       "Entrümpelung einer abgebrannten Wohnung – Brandreste und beschädigtes Inventar vollständig entfernt und entsorgt.",
+    longDescription:
+      "Nach einem Brandschaden in Wien entrümpelten wir die Wohnung vollständig: Brandreste und beschädigtes Inventar wurden entfernt und fachgerecht entsorgt. Ziel war eine sichere, geräumte Fläche für die weitere Sanierung.",
     before: "/pics/vorher-4.jpeg",
     after: "/pics/nachher-4.jpeg",
-    beforeAlt: "Brandgeschädigte Wohnung in Wien vor der Entrümpelung",
-    afterAlt: "Wohnung in Wien nach Brandschaden-Entrümpelung – geräumt und entsorgt",
+    beforeAlt:
+      "Brandschaden-Entrümpelung Wien – Zustand vorher mit Brandresten",
+    afterAlt:
+      "Brandschaden-Entrümpelung Wien – Zustand nachher nach vollständiger Räumung",
   },
 ] as const;
 

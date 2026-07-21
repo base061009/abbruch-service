@@ -38,7 +38,7 @@ export async function generateMetadata({
   if (!service) return {};
 
   const title = `${service.shortTitle} | ${siteConfig.shortName}`;
-  const description = service.description;
+  const description = `${service.description} Fachgerecht, termingerecht – Wiener Entkernung.`;
   const path = routes.service(service.slug);
 
   return {
@@ -71,7 +71,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     description: service.longDescription,
     url: absoluteUrl(routes.service(service.slug)),
     provider: {
-      "@type": "LocalBusiness",
+      "@type": "HomeAndConstructionBusiness",
       name: siteConfig.name,
       telephone: siteConfig.phoneE164,
       url: siteConfig.url,
@@ -91,7 +91,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
         <Link href={routes.services} className="hover:underline">
-          Dienstleistungen
+          Entkernung und Rückbau-Leistungen in Wien
         </Link>
       </p>
 
@@ -105,6 +105,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       <p className="mt-4 text-lg leading-relaxed text-white/65">
         {service.longDescription}
       </p>
+
+      <div className="mt-6 space-y-4 text-base leading-relaxed text-white/60">
+        {service.body.map((paragraph) => (
+          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+        ))}
+      </div>
 
       <h2 className="mt-10 text-xl font-bold text-white">Leistungsinhalte</h2>
       <ul className="mt-4 space-y-3">
@@ -122,14 +128,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       <div className="mt-12 flex flex-col items-start justify-between gap-6 rounded-xl border border-white/10 px-6 py-7 sm:flex-row sm:items-center sm:px-8">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-white">
-            Angebot für {service.title} anfordern
+            Angebot für {service.title} in Wien
           </h2>
           <p className="mt-1 text-sm text-white/55">
             Unverbindlich und schnell – wir melden uns bei Ihnen.
           </p>
         </div>
         <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href={routes.contact}>Kontakt aufnehmen</Link>
+          <Link href={routes.contact}>
+            {service.title} in Wien anfragen
+          </Link>
         </Button>
       </div>
 

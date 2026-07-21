@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Kontakt – Entkernung & Abbruch in Wien",
-  description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Entkernungs- und Abbruchprojekt in Wien.`,
+  title: "Kontakt – Angebot für Entkernung in Wien",
+  description:
+    "Kontaktieren Sie Wiener Entkernung für Abbruch, Entkernung und Entrümpelung in Wien. Telefon, E-Mail und Adresse – unverbindliche Beratung.",
   alternates: { canonical: routes.contact },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: routes.contact,
     siteName: siteConfig.shortName,
-    title: "Kontakt – Entkernung & Abbruch in Wien",
-    description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Entkernungs- und Abbruchprojekt in Wien.`,
+    title: "Kontakt – Angebot für Entkernung in Wien",
+    description:
+      "Kontaktieren Sie Wiener Entkernung für Abbruch, Entkernung und Entrümpelung in Wien. Telefon, E-Mail und Adresse.",
   },
 };
 
@@ -39,9 +42,22 @@ export default function ContactPage() {
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
           Kontakt für Entkernung in Wien
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-white/60">
-          Anruf oder kurze Mail – wir beraten Sie unverbindlich zu Abbruch,
-          Entkernung und Entrümpelung in Wien und Umgebung.
+        <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/60">
+          Sie planen Abbruch, Entkernung oder Entrümpelung in Wien? Rufen Sie
+          uns an oder schreiben Sie kurz per E-Mail – wir beraten Sie
+          unverbindlich zu Umfang, Termin und nächstem Schritt.
+        </p>
+        <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-white/50">
+          Je genauer Sie Objekt, gewünschte Leistung und gewünschten Zeitraum
+          beschreiben, desto schneller können wir eine Besichtigung und ein
+          Angebot vorbereiten. Details zu unseren Leistungen finden Sie unter{" "}
+          <Link
+            href={routes.services}
+            className="font-semibold text-[#f2aa4c] hover:underline"
+          >
+            Entkernung und Rückbau-Leistungen in Wien
+          </Link>
+          .
         </p>
       </div>
 
@@ -55,7 +71,7 @@ export default function ContactPage() {
           </span>
           <span className="min-w-0 flex-1 text-left">
             <span className="block text-xs font-semibold tracking-wide uppercase opacity-70">
-              Anrufen
+              Telefon
             </span>
             <span className="mt-0.5 block text-lg font-bold tracking-tight sm:text-xl">
               {siteConfig.phone}
@@ -72,7 +88,7 @@ export default function ContactPage() {
           </span>
           <span className="min-w-0 flex-1 text-left">
             <span className="block text-xs font-semibold tracking-wide text-white/50 uppercase">
-              E-Mail schreiben
+              E-Mail
             </span>
             <span className="mt-0.5 block break-all text-base font-bold leading-snug tracking-tight text-[#f2aa4c] sm:text-lg">
               {siteConfig.email}
@@ -82,25 +98,25 @@ export default function ContactPage() {
       </div>
 
       <div className="relative mx-auto mt-12 max-w-lg border-t border-white/10 pt-8 text-center sm:mt-14">
+        <h2 className="text-sm font-semibold tracking-wide text-white/45 uppercase">
+          Adresse
+        </h2>
         <a
           href={mapsHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex max-w-full items-start gap-3 text-left transition-colors hover:text-[#f2aa4c]"
+          className="mt-4 inline-flex max-w-full items-start gap-3 text-left transition-colors hover:text-[#f2aa4c]"
         >
           <MapPin
             className="mt-0.5 size-5 shrink-0 text-[#f2aa4c]"
             aria-hidden
           />
-          <span>
-            <span className="block text-xs font-semibold tracking-wide text-white/45 uppercase">
-              Adresse
-            </span>
-            <span className="mt-1 block text-base leading-relaxed text-white/80">
-              {siteConfig.address.street}
-              <br />
-              {siteConfig.address.zip} {siteConfig.address.city}
-            </span>
+          <span className="text-base leading-relaxed text-white/80">
+            {siteConfig.name}
+            <br />
+            {siteConfig.address.street}
+            <br />
+            {siteConfig.address.zip} {siteConfig.address.city}
           </span>
         </a>
       </div>

@@ -26,12 +26,12 @@ export async function generateMetadata({
   const project = getProjectBySlug(slug);
   if (!project) return {};
 
-  const title = `${project.title} – Entkernung ${project.location}`;
-  const description = project.description;
+  const title = `${project.title} – Entkernung ${project.location} | ${siteConfig.shortName}`;
+  const description = `${project.description} Vorher/Nachher-Beispiel von Wiener Entkernung.`;
   const path = routes.project(project.slug);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: path },
     openGraph: {
@@ -62,7 +62,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: project.title,
-    description: project.description,
+    description: project.longDescription,
     url: absoluteUrl(routes.project(project.slug)),
     dateCreated: project.year,
     locationCreated: {
@@ -71,7 +71,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     },
     image: [absoluteUrl(project.before), absoluteUrl(project.after)],
     creator: {
-      "@type": "LocalBusiness",
+      "@type": "HomeAndConstructionBusiness",
       name: siteConfig.name,
       url: siteConfig.url,
     },
@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
       <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
         <Link href={routes.projects} className="hover:underline">
-          Projekte
+          Entkernungsprojekte in Wien
         </Link>
         <span aria-hidden> · </span>
         {project.location} · {project.year}
@@ -98,8 +98,18 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       <p className="mt-4 text-lg leading-relaxed text-white/65">
         {project.description}
       </p>
+      <p className="mt-3 text-base leading-relaxed text-white/55">
+        {project.longDescription}
+      </p>
 
-      <div className="mt-10">
+      <h2 className="mt-10 text-xl font-bold text-white">
+        Vorher/Nachher-Vergleich
+      </h2>
+      <p className="mt-2 text-sm leading-relaxed text-white/50">
+        Die Bilder zeigen den Zustand vor und nach dem Einsatz bei diesem
+        Projekt in Wien.
+      </p>
+      <div className="mt-5">
         <BeforeAfter
           beforeSrc={project.before}
           afterSrc={project.after}
@@ -118,7 +128,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </p>
         </div>
         <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href={routes.contact}>Kontakt aufnehmen</Link>
+          <Link href={routes.contact}>
+            Ähnliches Projekt in Wien anfragen
+          </Link>
         </Button>
       </div>
 
@@ -132,7 +144,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   href={routes.project(item.slug)}
                   className="font-semibold text-[#f2aa4c] hover:underline"
                 >
-                  {item.title}
+                  {item.title} – Entkernung in Wien
                 </Link>
                 <p className="mt-1 text-sm text-white/55">{item.description}</p>
               </li>

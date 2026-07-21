@@ -13,7 +13,14 @@ const icons: Record<(typeof services)[number]["icon"], LucideIcon> = {
   CookingPot,
 };
 
-export function ServiceCards() {
+type ServiceCardsProps = {
+  /** Use h3 under a page section that already has an h2. */
+  headingLevel?: "h2" | "h3";
+};
+
+export function ServiceCards({ headingLevel = "h2" }: ServiceCardsProps) {
+  const Heading = headingLevel;
+
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {services.map((service) => {
@@ -30,14 +37,14 @@ export function ServiceCards() {
               <span className="flex size-11 items-center justify-center rounded-lg bg-[#f2aa4c] text-[#101820]">
                 <Icon className="size-5" aria-hidden />
               </span>
-              <h2 className="mt-5 text-xl font-bold tracking-tight text-white">
+              <Heading className="mt-5 text-xl font-bold tracking-tight text-white">
                 {service.title}
-              </h2>
+              </Heading>
               <p className="mt-2 text-sm leading-relaxed text-white/70">
                 {service.description}
               </p>
               <p className="mt-4 text-sm font-semibold text-[#f2aa4c]">
-                Mehr erfahren →
+                {service.shortTitle} im Detail →
               </p>
             </Link>
           </article>
