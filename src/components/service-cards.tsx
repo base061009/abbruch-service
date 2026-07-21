@@ -44,7 +44,7 @@ export function ServiceCards({ headingLevel = "h2" }: ServiceCardsProps) {
                 {service.description}
               </p>
               <p className="mt-4 text-sm font-semibold text-[#f2aa4c]">
-                {service.shortTitle} im Detail →
+                Mehr erfahren →
               </p>
             </Link>
           </article>

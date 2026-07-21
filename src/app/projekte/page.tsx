@@ -75,10 +75,8 @@ export default function ProjectsPage() {
             Wir beraten Sie zu Entkernung, Abbruch und Entrümpelung in Wien.
           </p>
         </div>
-        <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href={routes.contact}>
-            Projekt in Wien unverbindlich anfragen
-          </Link>
+        <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
+          <Link href={routes.contact}>Kontakt aufnehmen</Link>
         </Button>
       </div>
     </div>

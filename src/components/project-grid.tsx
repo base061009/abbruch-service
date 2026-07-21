@@ -52,7 +52,7 @@ export function ProjectGrid() {
                 {project.description}
               </p>
               <p className="mt-3 text-sm font-semibold text-[#f2aa4c]">
-                Vorher/Nachher: {project.title} in Wien →
+                Vergleich öffnen →
               </p>
             </div>
           </Link>

@@ -81,9 +81,7 @@ export default function HomePage() {
               size="lg"
               className="h-11 rounded-lg px-8 text-base font-semibold"
             >
-              <Link href={routes.contact}>
-                Angebot für Entkernung in Wien anfragen
-              </Link>
+              <Link href={routes.contact}>Jetzt kontaktieren</Link>
             </Button>
             <Button
               asChild
@@ -91,9 +89,7 @@ export default function HomePage() {
               size="lg"
               className="h-11 rounded-lg border-2 border-[#f2aa4c]/70 bg-transparent px-8 text-base font-semibold text-[#f2aa4c] hover:bg-[#f2aa4c]/10 hover:text-[#f2aa4c]"
             >
-              <Link href={routes.services}>
-                Leistungen: Entkernung Wien ansehen
-              </Link>
+              <Link href={routes.services}>Leistungen ansehen</Link>
             </Button>
           </div>
         </div>
@@ -172,10 +168,8 @@ export default function HomePage() {
               Altbau bis zur Gewerbefläche.
             </p>
           </div>
-          <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-            <Link href={routes.projects}>
-              Unsere Entkernungsprojekte in Wien
-            </Link>
+          <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
+            <Link href={routes.projects}>Projekte ansehen</Link>
           </Button>
         </div>
       </section>
@@ -197,10 +191,8 @@ export default function HomePage() {
               Entkernung, Abbruch oder Entrümpelung.
             </p>
           </div>
-          <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-            <Link href={routes.contact}>
-              Jetzt Entkernung in Wien anfragen
-            </Link>
+          <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
+            <Link href={routes.contact}>Kontakt aufnehmen</Link>
           </Button>
         </div>
       </section>

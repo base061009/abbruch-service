@@ -91,7 +91,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
         <Link href={routes.services} className="hover:underline">
-          Entkernung und Rückbau-Leistungen in Wien
+          Dienstleistungen
         </Link>
       </p>
 
@@ -134,10 +134,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             Unverbindlich und schnell – wir melden uns bei Ihnen.
           </p>
         </div>
-        <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href={routes.contact}>
-            {service.title} in Wien anfragen
-          </Link>
+        <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
+          <Link href={routes.contact}>Kontakt aufnehmen</Link>
         </Button>
       </div>
 

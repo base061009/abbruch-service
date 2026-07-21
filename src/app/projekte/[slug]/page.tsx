@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
       <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
         <Link href={routes.projects} className="hover:underline">
-          Entkernungsprojekte in Wien
+          Projekte
         </Link>
         <span aria-hidden> · </span>
         {project.location} · {project.year}
@@ -127,10 +127,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             Wir beraten Sie unverbindlich zu Entkernung und Entrümpelung in Wien.
           </p>
         </div>
-        <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href={routes.contact}>
-            Ähnliches Projekt in Wien anfragen
-          </Link>
+        <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
+          <Link href={routes.contact}>Kontakt aufnehmen</Link>
         </Button>
       </div>
 

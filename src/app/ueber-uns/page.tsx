@@ -121,10 +121,8 @@ export default function AboutPage() {
             Komplett-, Bad- und Küchenentkernung – übersichtlich erklärt.
           </p>
         </div>
-        <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href={routes.services}>
-            Leistungen: Entkernung Wien ansehen
-          </Link>
+        <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
+          <Link href={routes.services}>Leistungen ansehen</Link>
         </Button>
       </div>
 

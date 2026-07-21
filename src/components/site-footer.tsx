@@ -88,7 +88,7 @@ export function SiteFooter() {
                 href={routes.contact}
                 className="text-sm text-white/70 transition-colors hover:text-[#f2aa4c]"
               >
-                Angebot für Entkernung in Wien anfragen
+                Kontakt
               </Link>
             </li>
           </ul>
