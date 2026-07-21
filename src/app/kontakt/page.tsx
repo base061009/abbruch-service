@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
+import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Kontakt",
-  description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Abbruchprojekt.`,
-  alternates: { canonical: "/contact" },
-  openGraph: { url: "/contact" },
+  title: "Kontakt – Entkernung & Abbruch in Wien",
+  description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Entkernungs- und Abbruchprojekt in Wien.`,
+  alternates: { canonical: routes.contact },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: routes.contact,
+    siteName: siteConfig.shortName,
+    title: "Kontakt – Entkernung & Abbruch in Wien",
+    description: `Kontaktieren Sie ${siteConfig.name} – Anruf oder E-Mail für Ihr Entkernungs- und Abbruchprojekt in Wien.`,
+  },
 };
 
 const mailtoHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
@@ -30,11 +37,11 @@ export default function ContactPage() {
           Kontakt
         </p>
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          Einfach melden
+          Kontakt für Entkernung in Wien
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-white/60">
           Anruf oder kurze Mail – wir beraten Sie unverbindlich zu Abbruch,
-          Entkernung und Entrümpelung.
+          Entkernung und Entrümpelung in Wien und Umgebung.
         </p>
       </div>
 

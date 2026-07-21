@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Source_Serif_4, Oswald, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { siteConfig } from "@/lib/site-config";
+import { absoluteUrl, siteConfig, services } from "@/lib/site-config";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -35,19 +35,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
-    // Relative → resolved via metadataBase (never VERCEL_URL)
     url: "/",
     siteName: siteConfig.shortName,
     title: siteConfig.title,
     description: siteConfig.shareText,
-    // Absolute URLs: Next.js otherwise may rewrite relative og:image via VERCEL_URL
     images: [
       {
         url: siteConfig.ogImageAbsolute,
         type: "image/jpeg",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.shortName} – Abbruch & Entkernung`,
+        alt: `${siteConfig.shortName} – Abbruch & Entkernung in Wien`,
       },
       {
         url: siteConfig.ogImageSquareAbsolute,
@@ -87,12 +85,14 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": absoluteUrl("/#business"),
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     image: siteConfig.ogImageAbsolute,
     telephone: siteConfig.phoneE164,
     email: siteConfig.email,
+    priceRange: siteConfig.priceRange,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -100,10 +100,31 @@ export default function RootLayout({
       addressLocality: siteConfig.address.city,
       addressCountry: "AT",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: siteConfig.geo.latitude,
+      longitude: siteConfig.geo.longitude,
+    },
     areaServed: [
       { "@type": "City", name: "Wien" },
       { "@type": "Country", name: "Österreich" },
     ],
+    sameAs: [siteConfig.social.instagram, siteConfig.social.tiktok],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Leistungen",
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.description,
+          url: absoluteUrl(`/dienstleistungen/${service.slug}`),
+          areaServed: "Wien",
+          provider: { "@id": absoluteUrl("/#business") },
+        },
+      })),
+    },
   };
 
   return (

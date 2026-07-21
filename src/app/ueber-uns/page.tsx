@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, routes } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Über uns",
-  description: `Lernen Sie ${siteConfig.name} kennen – Ihr Partner für Abbruch und Entkernung in Österreich.`,
-  alternates: { canonical: "/about" },
-  openGraph: { url: "/about" },
+  description: `Lernen Sie ${siteConfig.name} kennen – Ihr Partner für Abbruch und Entkernung in Wien und Österreich.`,
+  alternates: { canonical: routes.about },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: routes.about,
+    siteName: siteConfig.shortName,
+    title: `Über uns | ${siteConfig.shortName}`,
+    description: `Lernen Sie ${siteConfig.name} kennen – Ihr Partner für Abbruch und Entkernung in Wien und Österreich.`,
+  },
 };
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -48,7 +55,7 @@ export default function AboutPage() {
           Über uns
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          {siteConfig.name}
+          {siteConfig.name} – Abbruch &amp; Entkernung in Wien
         </h1>
         <p className="mt-3 text-base text-white/60 sm:text-lg">
           Abbruch und Entkernung mit Haltung.

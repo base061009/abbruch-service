@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
   description: `Datenschutzerklärung von ${siteConfig.name}.`,
   robots: { index: true, follow: true },
-  alternates: { canonical: "/privacy" },
-  openGraph: { url: "/privacy" },
+  alternates: { canonical: routes.privacy },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: routes.privacy,
+    siteName: siteConfig.shortName,
+    title: `Datenschutz | ${siteConfig.shortName}`,
+    description: `Datenschutzerklärung von ${siteConfig.name}.`,
+  },
 };
 
 export default function PrivacyPage() {

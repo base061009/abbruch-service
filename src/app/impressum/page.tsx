@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { Impressum } from "@/components/impressum";
-import { siteConfig } from "@/lib/site-config";
+import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Impressum",
   description: `Impressum und Anbieterkennzeichnung von ${siteConfig.name}.`,
   robots: { index: true, follow: true },
-  alternates: { canonical: "/imprint" },
-  openGraph: { url: "/imprint" },
+  alternates: { canonical: routes.imprint },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: routes.imprint,
+    siteName: siteConfig.shortName,
+    title: `Impressum | ${siteConfig.shortName}`,
+    description: `Impressum und Anbieterkennzeichnung von ${siteConfig.name}.`,
+  },
 };
 
 export default function ImprintPage() {

@@ -2,13 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceCards } from "@/components/service-cards";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
+import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Dienstleistungen",
-  description: `Komplettentkernung, Bad- und Küchenentkernung – Leistungen von ${siteConfig.name}.`,
-  alternates: { canonical: "/services" },
-  openGraph: { url: "/services" },
+  title: "Entkernung in Wien – Dienstleistungen",
+  description: `Komplettentkernung, Bad- und Küchenentkernung in Wien – Leistungen von ${siteConfig.name}.`,
+  alternates: { canonical: routes.services },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: routes.services,
+    siteName: siteConfig.shortName,
+    title: "Entkernung in Wien – Dienstleistungen",
+    description: `Komplettentkernung, Bad- und Küchenentkernung in Wien – Leistungen von ${siteConfig.name}.`,
+  },
 };
 
 export default function ServicesPage() {
@@ -19,11 +26,11 @@ export default function ServicesPage() {
           Dienstleistungen
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Alles aus einer Hand
+          Entkernung in Wien – unsere Leistungen
         </h1>
         <p className="mt-3 text-base leading-relaxed text-white/60 sm:text-lg">
           Von der ersten Besichtigung bis zur fachgerechten Entsorgung –
-          kompakt, klar und auf Ihren Termin abgestimmt.
+          Komplett-, Bad- und Küchenentkernung, abgestimmt auf Ihren Termin.
         </p>
       </header>
 
@@ -41,7 +48,7 @@ export default function ServicesPage() {
           </p>
         </div>
         <Button asChild size="lg" className="h-11 rounded-lg px-8 font-semibold">
-          <Link href="/contact">Kontakt aufnehmen</Link>
+          <Link href={routes.contact}>Kontakt aufnehmen</Link>
         </Button>
       </div>
     </div>
