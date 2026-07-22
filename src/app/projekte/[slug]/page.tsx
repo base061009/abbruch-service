@@ -96,20 +96,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         {project.title} in {project.location}
       </h1>
       <p className="mt-4 text-lg leading-relaxed text-white/65">
-        {project.description}
-      </p>
-      <p className="mt-3 text-base leading-relaxed text-white/55">
         {project.longDescription}
       </p>
 
-      <h2 className="mt-10 text-xl font-bold text-white">
-        Vorher/Nachher-Vergleich
-      </h2>
-      <p className="mt-2 text-sm leading-relaxed text-white/50">
-        Die Bilder zeigen den Zustand vor und nach dem Einsatz bei diesem
-        Projekt in Wien.
-      </p>
-      <div className="mt-5">
+      <div className="mt-8">
         <BeforeAfter
           beforeSrc={project.before}
           afterSrc={project.after}
@@ -124,7 +114,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             Ähnliches Projekt geplant?
           </h2>
           <p className="mt-1 text-sm text-white/55">
-            Wir beraten Sie unverbindlich zu Entkernung und Entrümpelung in Wien.
+            Unverbindliche Beratung zu Entkernung in Wien.
           </p>
         </div>
         <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
@@ -142,7 +132,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   href={routes.project(item.slug)}
                   className="font-semibold text-[#f2aa4c] hover:underline"
                 >
-                  {item.title} – Entkernung in Wien
+                  {item.title}
                 </Link>
                 <p className="mt-1 text-sm text-white/55">{item.description}</p>
               </li>

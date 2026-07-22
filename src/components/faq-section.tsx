@@ -11,7 +11,7 @@ type FaqSectionProps = {
 export function FaqSection({
   className,
   heading = "Häufige Fragen",
-  intro = "Kurz und klar – die wichtigsten Punkte zu Entkernung und Abbruch in Wien.",
+  intro = "Kurz und klar – Entkernung Wien, Wohnung entkernen und Ablauf.",
 }: FaqSectionProps) {
   return (
     <section className={cn(className)} aria-labelledby="faq-heading">
@@ -25,7 +25,7 @@ export function FaqSection({
         >
           {heading}
         </h2>
-        <p className="mt-3 text-base leading-relaxed text-white/60 sm:text-lg">
+        <p className="mt-3 text-base leading-relaxed text-white/60">
           {intro}
         </p>
       </header>
@@ -54,7 +54,7 @@ export function FaqSection({
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-white/50">
+      <p className="mt-3 text-sm text-white/50">
         Weitere Fragen?{" "}
         <Link
           href={routes.contact}

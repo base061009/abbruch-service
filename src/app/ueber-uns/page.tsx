@@ -6,7 +6,7 @@ import { siteConfig, routes } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Über uns – Wiener Entkernung in Wien",
   description:
-    "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien. Zuverlässig, termingerecht und mit klarer Kommunikation.",
+    "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien. Zuverlässig und termingerecht.",
   alternates: { canonical: routes.about },
   openGraph: {
     type: "website",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.shortName,
     title: "Über uns – Wiener Entkernung in Wien",
     description:
-      "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien. Zuverlässig, termingerecht und mit klarer Kommunikation.",
+      "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien.",
   },
 };
 
@@ -59,66 +59,41 @@ export default function AboutPage() {
           Über uns
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          {siteConfig.name} – Abbruch &amp; Entkernung in Wien
+          {siteConfig.name}
         </h1>
         <p className="mt-3 text-base text-white/60 sm:text-lg">
-          Abbruch, Entkernung und Entrümpelung mit klarer Haltung: sauber,
-          zuverlässig, termingerecht.
+          Abbruch, Entkernung und Entrümpelung in Wien – sauber, zuverlässig,
+          termingerecht.
         </p>
       </header>
 
       <div className="mt-8 space-y-4 text-base leading-relaxed text-white/75">
         <p>
-          {siteConfig.name} steht für professionellen Rückbau in Wien.
-          Wir entkernen Wohnungen und Gewerbeflächen, übernehmen Bad- und
-          Küchenrückbau und unterstützen bei Entrümpelung – inklusive
-          Abtransport und Entsorgung. Unser Anspruch: jedes Objekt so zu
-          übergeben, dass Sanierung oder Umbau ohne Verzögerung starten können.
+          Wir entkernen Wohnungen und Gewerbeflächen in Wien, übernehmen Bad-
+          und Küchenrückbau und unterstützen bei Entrümpelung – inklusive
+          Entsorgung. Entkernung Wien bedeutet für uns: besenreine Übergabe,
+          damit Sanierung oder Umbau ohne Verzögerung starten können.
         </p>
         <p>
-          Als lokaler Partner für Entkernung Wien und Abbruch Wien legen wir
-          Wert auf transparente Angebote, verlässliche Termine und respektvollen
-          Umgang mit Haus, Nachbarschaft und Gebäudesubstanz. Ob Altbau,
-          Terrasse oder Brandschaden: Wir planen den Ablauf mit Ihnen und halten
-          Sie über den Fortschritt auf dem Laufenden.
-        </p>
-        <h2 className="pt-2 text-xl font-bold text-white">
-          Wie wir arbeiten
-        </h2>
-        <p>
-          Jeder Auftrag beginnt mit einer Besichtigung und einer ehrlichen
-          Einschätzung des Umfangs. Danach erhalten Sie ein klares Angebot.
-          Bei der Ausführung achten wir auf Schutz angrenzender Bereiche,
-          sichere Entsorgungswege und eine besenreine Übergabe. So bleibt Ihr
-          Projekt planbar – von der ersten Anfrage bis zum Abschluss.
-        </p>
-        <p>
-          Sie möchten mehr über konkrete Aufträge erfahren? Sehen Sie sich
-          unsere{" "}
+          Transparentes Angebot, verlässliche Termine und respektvoller Umgang
+          mit Haus und Nachbarschaft in Wien. Mehr Einblicke in{" "}
           <Link
             href={routes.projects}
             className="font-semibold text-[#f2aa4c] hover:underline"
           >
-            Entkernungsprojekte in Wien
-          </Link>{" "}
-          an oder fragen Sie direkt ein{" "}
-          <Link
-            href={routes.contact}
-            className="font-semibold text-[#f2aa4c] hover:underline"
-          >
-            Angebot für Entkernung in Wien
-          </Link>{" "}
-          an.
+            unsere Projekte
+          </Link>
+          .
         </p>
       </div>
 
       <div className="mt-10 flex flex-col items-start justify-between gap-6 rounded-xl border border-white/10 px-6 py-7 sm:flex-row sm:items-center sm:px-8">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-white">
-            Lernen Sie unsere Leistungen kennen
+            Unsere Leistungen
           </h2>
           <p className="mt-1 text-sm text-white/55">
-            Komplett-, Bad- und Küchenentkernung – übersichtlich erklärt.
+            Komplett-, Bad- und Küchenentkernung.
           </p>
         </div>
         <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">

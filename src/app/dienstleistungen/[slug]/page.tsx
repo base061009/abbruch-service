@@ -106,11 +106,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         {service.longDescription}
       </p>
 
-      <div className="mt-6 space-y-4 text-base leading-relaxed text-white/60">
-        {service.body.map((paragraph) => (
-          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-        ))}
-      </div>
+      {service.body.map((paragraph) => (
+        <p
+          key={paragraph.slice(0, 32)}
+          className="mt-4 text-base leading-relaxed text-white/55"
+        >
+          {paragraph}
+        </p>
+      ))}
 
       <h2 className="mt-10 text-xl font-bold text-white">Leistungsinhalte</h2>
       <ul className="mt-4 space-y-3">

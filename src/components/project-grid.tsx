@@ -2,10 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects, routes } from "@/lib/site-config";
 
-export function ProjectGrid() {
+type ProjectGridProps = {
+  /** Limit how many projects to show (e.g. homepage preview). */
+  limit?: number;
+  className?: string;
+};
+
+export function ProjectGrid({ limit, className }: ProjectGridProps) {
+  const items = limit ? projects.slice(0, limit) : projects;
+  const Heading = "h2";
+
   return (
-    <ul className="mt-12 grid auto-rows-fr gap-6 sm:grid-cols-2">
-      {projects.map((project) => (
+    <ul
+      className={
+        className ?? "mt-10 grid auto-rows-fr gap-6 sm:grid-cols-2"
+      }
+    >
+      {items.map((project) => (
         <li key={project.id} className="h-full">
           <Link
             href={routes.project(project.slug)}
@@ -39,15 +52,15 @@ export function ProjectGrid() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-1 flex-col p-6">
+            <div className="flex flex-1 flex-col p-5 sm:p-6">
               <div className="flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wide text-white/45 uppercase">
                 <span>{project.location}</span>
                 <span aria-hidden>·</span>
                 <span>{project.year}</span>
               </div>
-              <h2 className="mt-2 text-xl font-bold tracking-tight text-white">
+              <Heading className="mt-2 text-xl font-bold tracking-tight text-white">
                 {project.title}
-              </h2>
+              </Heading>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-white/60">
                 {project.description}
               </p>
