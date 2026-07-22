@@ -7,7 +7,7 @@ import { routes, siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: { absolute: "Entkernung Wien – Leistungen | Wiener Entkernung" },
   description:
-    "Entkernung Wien: Komplett-, Bad- und Küchenentkernung. Wohnung oder Gewerbe entkernen – inkl. Entsorgung. Unverbindliches Angebot.",
+    "Entkernung in Wien: Komplett-, Bad- und Küchenentkernung. Wohnung oder Gewerbe entkernen – inklusive Entsorgung.",
   alternates: { canonical: routes.services },
   openGraph: {
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.shortName,
     title: "Entkernung Wien – Leistungen | Wiener Entkernung",
     description:
-      "Entkernung Wien: Komplett-, Bad- und Küchenentkernung. Wohnung oder Gewerbe entkernen – inkl. Entsorgung.",
+      "Entkernung in Wien: Komplett-, Bad- und Küchenentkernung. Wohnung oder Gewerbe entkernen – inklusive Entsorgung.",
   },
 };
 
@@ -28,12 +28,11 @@ export default function ServicesPage() {
           Dienstleistungen
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Entkernung Wien
+          Entkernung in Wien
         </h1>
         <p className="mt-4 text-base leading-relaxed text-white/65 sm:text-lg">
-          Sie wollen eine Wohnung oder Gewerbefläche in Wien entkernen? Wir
-          übernehmen Komplett-, Bad- und Küchenentkernung inklusive Entsorgung –
-          klar geplant und termingerecht.
+          Ob Komplett-, Bad- oder Küchenentkernung: Wir entkernen Wohnungen und
+          Gewerbeflächen – inklusive Entsorgung, klar geplant und termingerecht.
         </p>
       </header>
 
@@ -47,7 +46,7 @@ export default function ServicesPage() {
             Unverbindliches Angebot
           </h2>
           <p className="mt-1 text-sm text-white/55">
-            Kurz schildern, was Sie in Wien entkernen möchten – wir melden uns.
+            Kurz Ihr Vorhaben schildern – wir melden uns rasch.
           </p>
         </div>
         <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">

@@ -4,18 +4,18 @@ import { Button } from "@/components/ui/button";
 import { siteConfig, routes } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Über uns – Wiener Entkernung in Wien",
+  title: "Über uns – Wiener Entkernung",
   description:
-    "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien. Zuverlässig und termingerecht.",
+    "Wiener Entkernung: Ihr Partner für Entkernung, Abbruch und Entrümpelung in Wien. Zuverlässig und termingerecht.",
   alternates: { canonical: routes.about },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: routes.about,
     siteName: siteConfig.shortName,
-    title: "Über uns – Wiener Entkernung in Wien",
+    title: "Über uns – Wiener Entkernung",
     description:
-      "Wiener Entkernung: Ihr Partner für Abbruch, Entkernung und Entrümpelung in Wien.",
+      "Wiener Entkernung: Ihr Partner für Entkernung, Abbruch und Entrümpelung in Wien.",
   },
 };
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
           {siteConfig.name}
         </h1>
         <p className="mt-3 text-base text-white/60 sm:text-lg">
-          Abbruch, Entkernung und Entrümpelung in Wien – sauber, zuverlässig,
+          Entkernung, Abbruch und Entrümpelung – sauber, zuverlässig,
           termingerecht.
         </p>
       </header>
@@ -70,13 +70,13 @@ export default function AboutPage() {
       <div className="mt-8 space-y-4 text-base leading-relaxed text-white/75">
         <p>
           Wir entkernen Wohnungen und Gewerbeflächen in Wien, übernehmen Bad-
-          und Küchenrückbau und unterstützen bei Entrümpelung – inklusive
-          Entsorgung. Entkernung Wien bedeutet für uns: besenreine Übergabe,
-          damit Sanierung oder Umbau ohne Verzögerung starten können.
+          und Küchenrückbau und helfen bei Entrümpelung – inklusive Entsorgung.
+          Ziel ist eine besenreine Übergabe, damit Sanierung oder Umbau ohne
+          Verzögerung starten können.
         </p>
         <p>
-          Transparentes Angebot, verlässliche Termine und respektvoller Umgang
-          mit Haus und Nachbarschaft in Wien. Mehr Einblicke in{" "}
+          Transparente Angebote, verlässliche Termine und respektvoller Umgang
+          mit Haus und Nachbarschaft. Mehr Einblicke in{" "}
           <Link
             href={routes.projects}
             className="font-semibold text-[#f2aa4c] hover:underline"

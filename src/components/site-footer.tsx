@@ -15,7 +15,7 @@ export function SiteFooter() {
             {siteConfig.name}
           </p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/55">
-            Abbruch, Entkernung und Entrümpelung in Wien – von der Besichtigung
+            Entkernung, Abbruch und Entrümpelung in Wien – von der Besichtigung
             bis zur sauberen Übergabe.
           </p>
           <address className="mt-5 space-y-2 text-sm not-italic text-white/70">

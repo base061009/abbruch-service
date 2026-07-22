@@ -3,18 +3,18 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Kontakt – Angebot für Entkernung in Wien",
+  title: "Kontakt – Wiener Entkernung",
   description:
-    "Kontaktieren Sie Wiener Entkernung für Abbruch, Entkernung und Entrümpelung in Wien. Telefon, E-Mail und Adresse.",
+    "Kontaktieren Sie Wiener Entkernung für Entkernung, Abbruch und Entrümpelung in Wien. Telefon, E-Mail und Adresse.",
   alternates: { canonical: routes.contact },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: routes.contact,
     siteName: siteConfig.shortName,
-    title: "Kontakt – Angebot für Entkernung in Wien",
+    title: "Kontakt – Wiener Entkernung",
     description:
-      "Kontaktieren Sie Wiener Entkernung für Abbruch, Entkernung und Entrümpelung in Wien.",
+      "Kontaktieren Sie Wiener Entkernung für Entkernung, Abbruch und Entrümpelung in Wien.",
   },
 };
 
@@ -28,26 +28,21 @@ const mapsHref = `https://maps.google.com/?q=${encodeURIComponent(
 
 export default function ContactPage() {
   return (
-    <div className="relative w-full overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(ellipse_at_top,_rgba(242,170,76,0.12),_transparent_60%)]"
-      />
-
-      <div className="relative mx-auto max-w-2xl text-center">
+    <div className="w-full px-5 py-14 sm:px-8 sm:py-20 lg:px-12 xl:px-16">
+      <div className="mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold tracking-[0.2em] text-[#f2aa4c] uppercase">
           Kontakt
         </p>
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          Kontakt für Entkernung in Wien
+          Schreiben Sie uns
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-white/60">
-          Wohnung in Wien entkernen oder Entrümpelung geplant? Anruf oder kurze
-          Mail – unverbindliche Beratung zu Entkernung Wien.
+          Anruf oder kurze Mail – wir beraten Sie unverbindlich zu Entkernung,
+          Abbruch und Entrümpelung in Wien.
         </p>
       </div>
 
-      <div className="relative mx-auto mt-12 flex max-w-lg flex-col gap-4 sm:mt-14">
+      <div className="mx-auto mt-12 flex max-w-lg flex-col gap-4 sm:mt-14">
         <a
           href={siteConfig.phoneHref}
           className="group flex min-h-16 items-center gap-4 rounded-xl bg-[#f2aa4c] px-5 py-4 text-[#101820] transition-transform active:scale-[0.99] sm:px-6"
@@ -83,7 +78,7 @@ export default function ContactPage() {
         </a>
       </div>
 
-      <div className="relative mx-auto mt-12 max-w-lg border-t border-white/10 pt-8 text-center sm:mt-14">
+      <div className="mx-auto mt-12 max-w-lg border-t border-white/10 pt-8 text-center sm:mt-14">
         <h2 className="text-sm font-semibold tracking-wide text-white/45 uppercase">
           Adresse
         </h2>

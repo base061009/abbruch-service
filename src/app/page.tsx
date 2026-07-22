@@ -51,11 +51,11 @@ export default function HomePage() {
             Abbruch · Entkernung · Entrümpelung
           </p>
           <h1 className="mt-4 text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl xl:text-6xl">
-            Entkernung Wien
+            Entkernung in Wien
           </h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/65 sm:text-xl">
-            Wohnung oder Gewerbe in Wien entkernen – professioneller Rückbau
-            von der Besichtigung bis zur sauberen Übergabe.
+            Wir entkernen Wohnungen und Gewerbeflächen – sauber, termingerecht
+            und von der ersten Besichtigung bis zur Übergabe.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -86,10 +86,10 @@ export default function HomePage() {
                 Projekte
               </p>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                Vorher / Nachher in Wien
+                Abgeschlossene Projekte
               </h2>
               <p className="mt-3 text-base leading-relaxed text-white/60">
-                So sieht Entkernung Wien aus – und wie wir Wohnungen entkernen.
+                Vorher/Nachher aus Entkernungen und Entrümpelungen in Wien.
               </p>
             </div>
             <Button
@@ -112,10 +112,10 @@ export default function HomePage() {
               Leistungen
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Entkernung Wien – Leistungen
+              Unsere Leistungen
             </h2>
             <p className="mt-3 text-base leading-relaxed text-white/60">
-              Komplett-, Bad- und Küchenentkernung: wir entkernen in Wien inkl.
+              Komplett-, Bad- und Küchenentkernung in Wien – inklusive
               Entsorgung.
             </p>
           </header>
@@ -153,7 +153,7 @@ export default function HomePage() {
 
       <div className="border-t border-white/10 px-5 py-14 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
         <div className="mx-auto w-full max-w-5xl">
-          <FaqSection intro="Kurz erklärt – Entkernung Wien, Wohnung entkernen und was Sie erwarten können." />
+          <FaqSection />
         </div>
       </div>
 
@@ -164,7 +164,7 @@ export default function HomePage() {
               Unverbindliches Angebot
             </h2>
             <p className="mt-1 text-sm text-white/55">
-              Kurz Ihr Projekt in Wien schildern – wir melden uns rasch.
+              Kurz Ihr Vorhaben schildern – wir melden uns rasch.
             </p>
           </div>
           <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">

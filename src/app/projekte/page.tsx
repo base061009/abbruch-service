@@ -5,18 +5,18 @@ import { Button } from "@/components/ui/button";
 import { routes, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Projekte: Entkernung & Entrümpelung in Wien",
+  title: "Projekte – Entkernung & Entrümpelung in Wien",
   description:
-    "Vorher/Nachher-Beispiele für Entkernung, Rückbau und Entrümpelung in Wien – abgeschlossene Projekte von Wiener Entkernung.",
+    "Vorher/Nachher-Beispiele aus Entkernung und Entrümpelung in Wien – abgeschlossene Projekte von Wiener Entkernung.",
   alternates: { canonical: routes.projects },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: routes.projects,
     siteName: siteConfig.shortName,
-    title: "Projekte: Entkernung & Entrümpelung in Wien",
+    title: "Projekte – Entkernung & Entrümpelung in Wien",
     description:
-      "Vorher/Nachher-Beispiele für Entkernung, Rückbau und Entrümpelung in Wien.",
+      "Vorher/Nachher-Beispiele aus Entkernung und Entrümpelung in Wien.",
   },
 };
 
@@ -28,11 +28,11 @@ export default function ProjectsPage() {
           Projekte
         </p>
         <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Abgeschlossene Projekte in Wien
+          Abgeschlossene Projekte
         </h1>
         <p className="mt-4 text-base leading-relaxed text-white/65 sm:text-lg">
-          Vorher/Nachher-Einblicke in Entkernung, Rückbau und Entrümpelung in
-          Wien.
+          Einblicke in Entkernungen und Entrümpelungen, die wir in Wien
+          umgesetzt haben.
         </p>
       </header>
 
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
             Ähnliches Projekt geplant?
           </h2>
           <p className="mt-1 text-sm text-white/55">
-            Unverbindliche Beratung zu Entkernung in Wien.
+            Wir beraten Sie unverbindlich.
           </p>
         </div>
         <Button asChild size="lg" className="h-11 shrink-0 rounded-lg px-8 font-semibold">
